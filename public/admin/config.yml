@@ -1,0 +1,105 @@
+backend:
+  name: github
+  repo: yolqi/MAJG-studio-astro
+  branch: migration-astro
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: "Page d'accueil"
+        file: src/content/pages/home.yaml
+        fields:
+          - label: Référencement (SEO)
+            name: seo
+            widget: object
+            fields:
+              - { label: "Titre de l'onglet du navigateur", name: title, widget: string }
+              - { label: "Description (résultats Google)", name: description, widget: text }
+
+          - label: "Section d'en-tête (Hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: "Titre principal", name: title, widget: string }
+              - { label: "Titre — fin mise en valeur", name: titleEmphasis, widget: string }
+              - { label: "Texte d'introduction", name: lead, widget: text }
+              - { label: "Bouton principal — texte", name: ctaPrimaryLabel, widget: string }
+              - { label: "Bouton principal — lien", name: ctaPrimaryHref, widget: string }
+              - { label: "Bouton secondaire — texte", name: ctaGhostLabel, widget: string }
+              - { label: "Bouton secondaire — lien", name: ctaGhostHref, widget: string }
+              - label: Statistiques
+                name: stats
+                widget: list
+                fields:
+                  - { label: Valeur, name: value, widget: string }
+                  - { label: Libellé, name: label, widget: string }
+
+          - label: "Section constat"
+            name: painPoint
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: "Paragraphe 1", name: paragraph1, widget: text }
+              - { label: "Paragraphe 2", name: paragraph2, widget: text }
+              - { label: "Lien — texte", name: discoverLinkLabel, widget: string }
+              - { label: "Lien — URL", name: discoverLinkHref, widget: string }
+              - { label: "Chiffre clé — valeur", name: statValue, widget: string }
+              - { label: "Chiffre clé — texte", name: statLabel, widget: text }
+
+          - label: "Section services"
+            name: services
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Sous-titre, name: subtitle, widget: text }
+              - label: Cartes
+                name: items
+                widget: list
+                fields:
+                  - { label: Numéro, name: number, widget: string }
+                  - { label: Titre, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+                  - { label: Lien, name: href, widget: string }
+
+          - label: "Section étapes (process)"
+            name: process
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Sous-titre, name: subtitle, widget: text }
+              - label: Étapes
+                name: steps
+                widget: list
+                fields:
+                  - { label: Numéro, name: number, widget: string }
+                  - { label: Titre, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+
+          - label: "Teaser tarifs"
+            name: pricingTeaser
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Sous-titre, name: subtitle, widget: text }
+              - { label: "Bouton — texte", name: ctaLabel, widget: string }
+              - { label: "Bouton — lien", name: ctaHref, widget: string }
+
+          - label: "Appel à l'action final"
+            name: finalCta
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Sous-titre, name: subtitle, widget: text }
+              - { label: "Bouton — texte", name: ctaLabel, widget: string }
+              - { label: "Bouton — lien", name: ctaHref, widget: string }
