@@ -8,3 +8,6 @@ dist/
 
 # Claude Code (config locale à la machine)
 .claude/settings.local.json
+
+# Local Netlify folder
+.netlify

@@ -45,7 +45,8 @@ const artisanEstimateMax = artisan.checkboxes.filter((c) => c.checked).reduce((s
               <button
                 class={`gite-thumb${i === 0 ? ' active' : ''}`}
                 data-room={room.key}
-                data-title={`${room.titleLine1}<br>${room.titleLine2}`}
+                data-title-line1={room.titleLine1}
+                data-title-line2={room.titleLine2}
                 data-desc={room.description}
                 data-btn={room.button}
                 data-img={giteRoomImages[i].src}

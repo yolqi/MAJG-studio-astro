@@ -41,7 +41,7 @@ document.querySelectorAll('.gite-thumb').forEach(btn=>btn.addEventListener('clic
   if(!wrap)return;
   setActive(wrap.querySelectorAll('.gite-thumb'),btn);
   const h=wrap.querySelector('h3'),d=wrap.querySelector('.gite-desc'),b=wrap.querySelector('.m-btn');
-  if(h)h.innerHTML=btn.dataset.title;
+  if(h){h.textContent='';h.append(document.createTextNode(btn.dataset.titleLine1),document.createElement('br'),document.createTextNode(btn.dataset.titleLine2))}
   if(d)d.textContent=btn.dataset.desc;
   if(b)b.textContent=btn.dataset.btn;
   wrap.style.setProperty('--photo',`url('${btn.dataset.img}')`);
