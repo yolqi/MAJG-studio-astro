@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script>if(localStorage.getItem('majg-theme')==='dark')document.documentElement.setAttribute('data-theme','dark')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — MAJG Studio</title>
+<meta name="description" content="Contactez MAJG Studio pour une démo gratuite de votre site ou un accompagnement réseaux sociaux, à Marseille ou partout en France.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="page-curtain" aria-hidden="true"></div>
+<nav id="nav">
+  <a href="index.html" class="nav-logo"><span class="logo-text">MAJG STUDIO</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Accueil</a>
+    <a href="sites-web.html">Sites Web</a>
+    <a href="reseaux-sociaux.html">Réseaux Sociaux</a>
+    <a href="realisations.html">Réalisations</a>
+    <a href="nous-sommes.html">Nous sommes</a>
+    <a href="tarifs.html">Tarifs</a>
+    <button class="theme-switch" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Activer le mode sombre"><span class="ts-thumb"><svg class="ts-ic ts-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg><svg class="ts-ic ts-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.7 14.6A8.6 8.6 0 1 1 9.4 3.3a7 7 0 0 0 11.3 11.3z"/></svg></span></button>
+    <a href="contact.html" class="nav-cta">Démo gratuite</a>
+  </div>
+  <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- CONTACT -->
+<section class="contact" style="padding-top:150px">
+  <div class="wrap">
+    <div class="rv">
+      <div class="sec-eye">Contact</div>
+      <h2 class="sec-h">Parlons de votre commerce.</h2>
+      <p class="sec-sub" style="color:var(--sand);opacity:.75">Dites-nous ce que vous faites, on vous recontacte avec une démo et une proposition claire. Gratuit, sans engagement.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info rv">
+        <div class="ci"><div class="l">Zone</div><div class="v">Marseille &amp; toute la France</div></div>
+        <div class="ci"><div class="l">Email</div><div class="v">contact@majg-studio.fr</div></div>
+        <div class="ci"><div class="l">Réponse</div><div class="v">Sous 72 h</div></div>
+        <div class="ci"><div class="l">Engagement</div><div class="v">Devis &amp; démo gratuits</div></div>
+      </div>
+      <form class="form-card rv" id="contactForm" action="https://formsubmit.co/jules.grisolle@icloud.com" method="POST">
+        <input type="hidden" name="_subject" value="Nouvelle demande de devis — MAJG Studio">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-row">
+          <div class="field"><label>Prénom</label><input type="text" name="prenom" placeholder="Votre prénom" required></div>
+          <div class="field"><label>Nom du commerce</label><input type="text" name="commerce" placeholder="Votre commerce" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>Email</label><input type="email" name="email" placeholder="vous@exemple.fr" required></div>
+          <div class="field"><label>Téléphone</label><input type="tel" name="telephone" placeholder="06 00 00 00 00"></div>
+        </div>
+        <div class="field"><label>Votre activité</label>
+          <select name="activite"><option>Sélectionner…</option><option>Coiffeur / barbier</option><option>Restaurant / café</option><option>Gîte / hôtel</option><option>Institut / bien-être</option><option>Commerce / boutique</option><option>Artisan</option><option>Profession libérale</option><option>Réseaux sociaux uniquement</option><option>Autre</option></select>
+        </div>
+        <div class="field"><label>Votre projet en quelques mots</label><textarea name="projet" placeholder="Je n'ai pas de site / je veux refaire le mien…"></textarea></div>
+        <button class="btn btn-primary btn-full" type="submit">Demander ma démo gratuite →</button>
+        <p class="form-note" id="formStatus">Vos informations servent uniquement à vous recontacter. Jamais transmises à des tiers.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-logo"><span class="logo-text" style="font-size:1.3rem">MAJG STUDIO</span></div>
+        <p style="opacity:.6;font-size:.9rem;margin-top:12px;max-width:260px">Sites web sur-mesure et gestion de réseaux sociaux pour les commerçants — basés à Marseille, actifs partout en France.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col"><h5>Le site</h5><a href="index.html">Accueil</a><a href="sites-web.html">Sites Web</a><a href="reseaux-sociaux.html">Réseaux Sociaux</a><a href="realisations.html">Réalisations</a><a href="nous-sommes.html">Nous sommes</a><a href="tarifs.html">Tarifs</a></div>
+        <div class="foot-col"><h5>Contact</h5><a href="contact.html">Démo gratuite</a><p>contact@majg-studio.fr</p><p>Marseille &amp; toute la France</p></div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 MAJG Studio — Tous droits réservés.</span>
+      <span><a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Politique de confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
