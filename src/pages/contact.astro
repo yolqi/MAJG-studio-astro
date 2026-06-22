@@ -31,12 +31,10 @@ const { seo, intro, infoItems } = page.data;
           </div>
           <div class="form-row">
             <div class="field"><label>Email</label><input type="email" name="email" placeholder="vous@exemple.fr" required></div>
-            <div class="field"><label>Téléphone</label><input type="tel" name="telephone" placeholder="06 00 00 00 00"></div>
+            <div class="field"><label>Téléphone</label><input type="tel" name="telephone" id="telephone" placeholder="06 00 00 00 00" inputmode="numeric" maxlength="14" pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" title="10 chiffres, ex. 06 12 34 56 78"></div>
           </div>
-          <div class="field"><label>Votre activité</label>
-            <select name="activite"><option>Sélectionner…</option><option>Coiffeur / barbier</option><option>Restaurant / café</option><option>Gîte / hôtel</option><option>Institut / bien-être</option><option>Commerce / boutique</option><option>Artisan</option><option>Profession libérale</option><option>Réseaux sociaux uniquement</option><option>Autre</option></select>
-          </div>
-          <div class="field"><label>Votre projet en quelques mots</label><textarea name="projet" placeholder="Je n'ai pas de site / je veux refaire le mien…"></textarea></div>
+          <div class="field"><label>Votre activité</label><input type="text" name="activite" placeholder="Ex. coiffeur, restaurant, institut de beauté…"></div>
+          <div class="field"><label>Parlez-nous de vous et de votre demande</label><textarea name="projet" placeholder="Décrivez votre activité et ce que vous recherchez (nouveau site, refonte, réseaux sociaux…)"></textarea></div>
           <button class="btn btn-primary btn-full" type="submit">Demander ma démo gratuite →</button>
           <p class="form-note" id="formStatus">Vos informations servent uniquement à vous recontacter. Jamais transmises à des tiers.</p>
         </form>

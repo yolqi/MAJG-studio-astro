@@ -86,6 +86,15 @@ document.querySelectorAll('.ig-grid-live').forEach(grid=>{
   }));
 });
 
+// Contact — formatage automatique du telephone (espace tous les 2 chiffres, 10 chiffres max)
+const telInput=document.getElementById('telephone');
+if(telInput){
+  telInput.addEventListener('input',()=>{
+    const digits=telInput.value.replace(/\D/g,'').slice(0,10);
+    telInput.value=digits.replace(/(\d{2})(?=\d)/g,'$1 ');
+  });
+}
+
 // Contact — envoi du formulaire de devis par email (FormSubmit, sans rechargement de page)
 const contactForm=document.getElementById('contactForm');
 if(contactForm){
