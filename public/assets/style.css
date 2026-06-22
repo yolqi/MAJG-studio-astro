@@ -44,8 +44,10 @@ a{text-decoration:none;color:inherit}
 
 /* NAV */
 nav{position:fixed;top:var(--strip-h);left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
-  padding:18px 32px;background:rgba(13,17,20,0);transition:background .35s,padding .35s,border-color .35s;border-bottom:1px solid transparent}
-nav.scrolled{background:rgba(13,17,20,.94);backdrop-filter:blur(12px);padding:12px 32px;border-bottom:1px solid var(--line-d)}
+  padding:18px 32px;transition:padding .35s,border-color .35s;border-bottom:1px solid transparent}
+nav::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:rgba(13,17,20,0);transition:background .35s}
+nav.scrolled{padding:12px 32px;border-bottom:1px solid var(--line-d)}
+nav.scrolled::before{background:rgba(13,17,20,.94);backdrop-filter:blur(12px)}
 .nav-logo{height:46px;display:flex;align-items:center}
 .logo-text{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:.02em;color:var(--white)}
 .nav-links{display:flex;gap:22px;align-items:center}
