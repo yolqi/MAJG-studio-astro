@@ -1,25 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const page = await getEntry('contact', 'contact');
+const { seo, intro, infoItems } = page.data;
 ---
-<Layout
-  title="Contact — MAJG Studio"
-  description="Contactez MAJG Studio pour une démo gratuite de votre site ou un accompagnement réseaux sociaux, à Marseille ou partout en France."
-  activePage="contact"
->
+<Layout title={seo.title} description={seo.description} activePage="contact">
   <!-- CONTACT -->
   <section class="contact" style="padding-top:150px">
     <div class="wrap">
       <div class="rv">
-        <div class="sec-eye">Contact</div>
-        <h2 class="sec-h">Parlons de votre commerce.</h2>
-        <p class="sec-sub" style="color:var(--sand);opacity:.75">Dites-nous ce que vous faites, on vous recontacte avec une démo et une proposition claire. Gratuit, sans engagement.</p>
+        <div class="sec-eye">{intro.eyebrow}</div>
+        <h2 class="sec-h">{intro.title}</h2>
+        <p class="sec-sub" style="color:var(--sand);opacity:.75">{intro.subtitle}</p>
       </div>
       <div class="contact-grid">
         <div class="contact-info rv">
-          <div class="ci"><div class="l">Zone</div><div class="v">Marseille &amp; toute la France</div></div>
-          <div class="ci"><div class="l">Email</div><div class="v">contact@majg-studio.fr</div></div>
-          <div class="ci"><div class="l">Réponse</div><div class="v">Sous 72 h</div></div>
-          <div class="ci"><div class="l">Engagement</div><div class="v">Devis &amp; démo gratuits</div></div>
+          {infoItems.map((item) => (
+            <div class="ci"><div class="l">{item.label}</div><div class="v">{item.value}</div></div>
+          ))}
         </div>
         <form class="form-card rv" id="contactForm" action="https://formsubmit.co/jules.grisolle@icloud.com" method="POST">
           <input type="hidden" name="_subject" value="Nouvelle demande de devis — MAJG Studio">

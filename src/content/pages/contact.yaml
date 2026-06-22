@@ -1,0 +1,14 @@
+seo:
+  title: "Contact — MAJG Studio"
+  description: "Contactez MAJG Studio pour une démo gratuite de votre site ou un accompagnement réseaux sociaux, à Marseille ou partout en France."
+
+intro:
+  eyebrow: "Contact"
+  title: "Parlons de votre commerce."
+  subtitle: "Dites-nous ce que vous faites, on vous recontacte avec une démo et une proposition claire. Gratuit, sans engagement."
+
+infoItems:
+  - { label: "Zone", value: "Marseille & toute la France" }
+  - { label: "Email", value: "contact@majg-studio.fr" }
+  - { label: "Réponse", value: "Sous 72 h" }
+  - { label: "Engagement", value: "Devis & démo gratuits" }

@@ -1,0 +1,31 @@
+seo:
+  title: "Politique de confidentialité — MAJG Studio"
+  description: "Politique de confidentialité et protection des données personnelles du site MAJG Studio."
+
+intro:
+  eyebrow: "Informations légales"
+  title: "Politique de confidentialité."
+
+sections:
+  - heading: "Responsable du traitement"
+    paragraphs:
+      - "Les données collectées sur ce site sont traitées par MAJG Studio (Jules Grisolle & Alexis Maillan), [adresse à compléter], contact@majg-studio.fr."
+  - heading: "Quelles données sont collectées"
+    paragraphs:
+      - "Lorsque vous remplissez le formulaire de contact, nous collectons : votre prénom, le nom de votre commerce, votre adresse email, votre numéro de téléphone, votre secteur d'activité et le message que vous nous adressez."
+  - heading: "Pourquoi (finalités)"
+    paragraphs:
+      - "Ces données sont utilisées uniquement pour répondre à votre demande de contact et vous recontacter au sujet d'une éventuelle prestation. Elles ne sont ni vendues ni transmises à des tiers à des fins commerciales."
+      - "Le formulaire de contact est acheminé par e-mail via un prestataire technique tiers (FormSubmit), qui agit en tant que sous-traitant pour le seul transfert du message — il n'utilise pas le contenu des messages à d'autres fins."
+  - heading: "Base légale"
+    paragraphs:
+      - "Le traitement repose sur votre consentement, donné en remplissant et en envoyant le formulaire."
+  - heading: "Durée de conservation"
+    paragraphs:
+      - "Vos données sont conservées 3 ans après notre dernier échange, puis supprimées."
+  - heading: "Vos droits"
+    paragraphs:
+      - "Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition sur vos données. Pour les exercer, contactez contact@majg-studio.fr. Vous pouvez aussi introduire une réclamation auprès de la CNIL (www.cnil.fr)."
+  - heading: "Cookies"
+    paragraphs:
+      - "Ce site n'utilise que des cookies strictement nécessaires à son fonctionnement et ne dépose aucun cookie publicitaire ou de suivi."

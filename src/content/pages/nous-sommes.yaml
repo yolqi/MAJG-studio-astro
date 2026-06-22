@@ -1,0 +1,34 @@
+seo:
+  title: "Nous sommes — MAJG Studio"
+  description: "MAJG Studio : deux Marseillais, Jules Grisolle et Alexis Maillan, formés aux sites web et aux réseaux sociaux. Découvrez notre histoire et ce qui nous a amenés à créer MAJG Studio."
+
+hero:
+  eyebrow: "Nous sommes"
+  title: "Deux Marseillais,"
+  titleEmphasis: "une idée simple."
+  lead: "Pas une agence anonyme : deux personnes, formées aux mêmes deux métiers, qui ont choisi de les mettre au service des commerces de leur ville."
+
+constat:
+  eyebrow: "Le constat de départ"
+  title: "Des commerces solides, absents en ligne."
+  paragraphs:
+    - "Marseille compte des commerces de qualité — coiffeurs, restaurants, instituts, artisans — qui restent pourtant invisibles sur internet. Le problème n'est jamais la qualité du service rendu. C'est l'absence d'une vitrine en ligne à la hauteur de ce travail, ou d'une présence sur les réseaux sociaux capable de le faire connaître."
+    - "Neuf clients sur dix se renseignent en ligne avant de se déplacer. Un commerce qu'on ne trouve pas en deux clics perd des clients qu'il aurait largement mérité de garder — pas par manque de savoir-faire, mais par manque de visibilité."
+    - "C'est ce constat, observé autour de nous à Marseille, qui a donné naissance à MAJG Studio."
+
+founders:
+  eyebrow: "Qui sommes-nous"
+  title: "Deux compétences, une même formation."
+  subtitle: "On est deux, on est de Marseille, et on s'est tous les deux formés à la création de sites web et à la gestion de réseaux sociaux. Selon le projet, c'est l'un, l'autre, ou les deux qui s'en occupent — jamais une case fixe attribuée d'avance."
+  people:
+    - name: "Jules Grisolle"
+      bio: "Jules est dans l'informatique depuis qu'il est enfant — la rigueur technique lui est venue naturellement, bien avant MAJG Studio. Ce qui le motive aujourd'hui : rendre service concrètement, à des commerçants qui en ont besoin."
+    - name: "Alexis Maillan"
+      bio: "Alexis est à l'aise avec tout le monde. Il sait ce qui donne envie de s'arrêter sur une publication ou de pousser la porte d'un commerce — un sens du contact qui sert directement la manière dont on présente votre activité, en ligne comme sur les réseaux."
+  revealText: "Deux compétences, deux personnalités, au service du même projet : chacun de nous deux peut s'occuper de votre site comme de vos réseaux sociaux. Le nom même de l'entreprise porte cette double appartenance — M.A.J.G, pour Maillan Alexis, Jules Grisolle. Mais aussi, et surtout : Make A Joint Glow. Faire rayonner, ensemble. C'est exactement ce qu'on cherche à faire pour votre commerce — sur votre site, et sur vos réseaux."
+
+finalCta:
+  eyebrow: "On en discute ?"
+  title: "Parlons de votre commerce."
+  ctaLabel: "Demander ma démo gratuite →"
+  ctaHref: "/contact"

@@ -1,0 +1,61 @@
+seo:
+  title: "Sites Web — MAJG Studio"
+  description: "Création de sites web sur-mesure pour commerçants et artisans, partout en France : coiffeurs, restaurants, gîtes, hôtels, instituts, artisans. Démo gratuite avant tout engagement."
+
+hero:
+  eyebrow: "Sites Web"
+  title: "Un site, ce n'est pas de la décoration."
+  titleEmphasis: "C'est un outil commercial."
+  lead: "Clair pour vos clients, pensé pour transformer une visite en appel ou en réservation. On vous montre une démo avant que vous décidiez quoi que ce soit."
+  ctaPrimaryLabel: "Demander ma démo →"
+  ctaPrimaryHref: "/contact"
+  ctaGhostLabel: "Voir les tarifs"
+  ctaGhostHref: "/tarifs#sites"
+
+audience:
+  eyebrow: "Pour qui"
+  title: "Un site pensé pour"
+  titleEmphasis: "votre activité"
+  titleSuffix: ", pas pour une autre."
+  subtitle: "Pas de modèle générique. Chaque site est conçu autour de votre activité, de vos clients et de votre quartier."
+  items:
+    - { number: "01", title: "Commerces & salons", description: "Vitrine soignée, présentation de vos prestations et tarifs, horaires, bouton d'appel direct. Un site qui rassure et donne envie de pousser la porte." }
+    - { number: "02", title: "Artisans & indépendants", description: "Vos services, votre zone d'intervention, un formulaire de contact clair. Vos clients vous trouvent, vous contactent, vous choisissent." }
+    - { number: "03", title: "Restaurants, gîtes & hôtels", description: "Menu ou présentation des chambres, ambiance en photos, accès et horaires. Une vitrine qui donne confiance avant même la première réservation." }
+    - { number: "04", title: "Bases solides pour Google", description: "Votre site est structuré pour que Google le comprenne dès la mise en ligne. Le référencement prend du temps — on pose les bonnes bases dès le départ, sans promesse de classement du jour au lendemain." }
+
+why:
+  eyebrow: "Pourquoi MAJG Studio"
+  title: "Tout est inclus. Vous n'avez rien à gérer."
+  subtitle: "On s'occupe de la technique pour que vous restiez concentré sur votre métier."
+  items:
+    - { icon: "✦", title: "Design sur-mesure", description: "Couleurs, typographie, structure — chaque détail est pensé pour vous, pas sorti d'un modèle." }
+    - { icon: "◎", title: "Pensé pour Google", description: "Structure, vitesse, mobile : les critères que Google regarde. Le classement vient avec le temps, la base est là dès le premier jour." }
+    - { icon: "▢", title: "Parfait sur mobile", description: "Impeccable sur téléphone, tablette et ordinateur — là où vos clients regardent." }
+    - { icon: "↻", title: "Hébergement & entretien", description: "Mise en ligne, sauvegardes, sécurité : le site tourne, on s'en occupe." }
+    - { icon: "◷", title: "Délai clair", description: "Un process simple, du premier échange à la mise en ligne. Vous savez toujours où on en est." }
+    - { icon: "♕", title: "Un seul interlocuteur", description: "Pas de sous-traitance, pas de ticket anonyme. Vous parlez directement à la personne qui réalise votre site." }
+
+process:
+  eyebrow: "Comment ça se passe"
+  title: "Simple, du début à la mise en ligne."
+  subtitle: "Trois étapes, et un interlocuteur unique tout du long."
+  steps:
+    - { number: "01", title: "On vous montre une démo", description: "On conçoit un premier aperçu de votre site, à votre nom, pour que vous voyiez concrètement le rendu. Gratuit et sans engagement." }
+    - { number: "02", title: "On l'affine ensemble", description: "Vos photos, vos textes, vos couleurs : on ajuste jusqu'à ce que le site vous ressemble vraiment." }
+    - { number: "03", title: "Votre site est en ligne", description: "Petit acompte au lancement pour démarrer, solde seulement quand vous êtes satisfait du résultat. On reste disponible après." }
+
+deepDive:
+  eyebrow: "En profondeur"
+  title: "Pourquoi ces détails comptent vraiment."
+  paragraphs:
+    - "Le référencement, ça ne se décrète pas le jour de la mise en ligne — ça se construit sur plusieurs mois. Ce qu'on fait dès le départ : une structure propre, des informations claires, un site rapide. Les bases que Google demande pour vous faire confiance, petit à petit. Et en attendant que le site monte naturellement, c'est exactement là que les réseaux sociaux prennent le relais : eux, ils vous rendent visible tout de suite."
+    - "Un site illisible sur mobile, c'est un client perdu en quelques secondes : plus de la moitié des recherches locales se font depuis un téléphone, dans la rue, juste avant de pousser une porte. Si le site rame ou casse l'affichage, ce client se tourne vers un autre commerce."
+    - "Et un CMS pour gérer son contenu soi-même, c'est la différence entre solliciter quelqu'un pour changer une photo ou un horaire, et le faire en deux minutes, seul, quand on le souhaite. C'est ce qui rend un site vraiment utile sur la durée — pas seulement soigné le jour de la mise en ligne."
+
+pricingTeaser:
+  eyebrow: "Tarifs"
+  title: "Des formules claires, dès le départ."
+  subtitle: "Essentiel, Vitrine ou Sur-mesure+ : trois points de départ, un devis gratuit et adapté à votre activité."
+  ctaLabel: "Voir les tarifs sites web →"
+  ctaHref: "/tarifs#sites"

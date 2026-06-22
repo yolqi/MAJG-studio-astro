@@ -1,17 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const page = await getEntry('tarifs', 'tarifs');
+const { seo, intro, web, social, faq, finalCta } = page.data;
 ---
-<Layout
-  title="Tarifs — MAJG Studio"
-  description="Tous nos tarifs : sites web et réseaux sociaux, formules claires, prix dès le départ. Devis gratuit."
-  activePage="tarifs"
->
+<Layout title={seo.title} description={seo.description} activePage="tarifs">
   <!-- INTRO -->
   <header class="hero">
     <div class="wrap hero-solo">
-      <span class="eyebrow">Tarifs</span>
-      <h1>Deux métiers, deux grilles. <em>Clair, dès le départ.</em></h1>
-      <p class="lead">Chaque projet est sur-mesure : ces formules sont des points de départ. Le devis est gratuit et adapté à votre activité.</p>
+      <span class="eyebrow">{intro.eyebrow}</span>
+      <h1>{intro.title} <em>{intro.titleEmphasis}</em></h1>
+      <p class="lead">{intro.lead}</p>
     </div>
   </header>
 
@@ -20,51 +20,23 @@ import Layout from '../layouts/Layout.astro';
     <div class="wrap">
       <h3>Sites web</h3>
       <div class="price-grid">
-        <div class="price-wrap rv"><div class="price">
-          <div class="pname">Essentiel</div>
-          <div class="ptag">Pour exister en ligne, simplement.</div>
-          <div class="pprice">dès 390 €<small></small></div>
-          <div class="pfrom">site une page · paiement unique</div>
-          <ul>
-            <li><span class="ck">✓</span> Site vitrine d'une page soignée</li>
-            <li><span class="ck">✓</span> Vos infos, horaires, contact</li>
-            <li><span class="ck">✓</span> Bouton d'appel direct</li>
-            <li><span class="ck">✓</span> Parfait sur mobile</li>
-            <li><span class="ck">✓</span> Mise en ligne incluse</li>
-          </ul>
-          <a href="/contact" class="btn btn-dark btn-full">Demander une démo</a>
-        </div></div>
-        <div class="price-wrap rv"><div class="price feat-price">
-          <span class="badge-pop">Le plus choisi</span>
-          <div class="pname">Vitrine</div>
-          <div class="ptag">Le bon équilibre pour un commerce.</div>
-          <div class="pprice">dès 690 €<small></small></div>
-          <div class="pfrom">3 à 5 sections · paiement unique</div>
-          <ul>
-            <li><span class="ck">✓</span> Tout l'Essentiel, en plus complet</li>
-            <li><span class="ck">✓</span> Plusieurs sections (prestations, galerie…)</li>
-            <li><span class="ck">✓</span> Formulaire de contact</li>
-            <li><span class="ck">✓</span> SEO local &amp; bases pour Google</li>
-            <li><span class="ck">✓</span> CMS pour gérer votre contenu</li>
-            <li><span class="ck">✓</span> Nom de domaine accompagné</li>
-          </ul>
-          <a href="/contact" class="btn btn-primary btn-full">Demander une démo</a>
-        </div></div>
-        <div class="price-wrap rv"><div class="price">
-          <div class="pname">Sur-mesure +</div>
-          <div class="ptag">Pour un projet plus ambitieux.</div>
-          <div class="pprice">dès 1 500 €<small></small></div>
-          <div class="pfrom">fonctionnalités avancées</div>
-          <ul>
-            <li><span class="ck">✓</span> Tout le pack Vitrine</li>
-            <li><span class="ck">✓</span> Réservation / prise de RDV en ligne</li>
-            <li><span class="ck">✓</span> Pages &amp; contenus multiples</li>
-            <li><span class="ck">✓</span> Animations &amp; fonctionnalités sur-mesure</li>
-          </ul>
-          <a href="/contact" class="btn btn-dark btn-full">Parler du projet</a>
-        </div></div>
+        {web.plans.map((plan) => (
+          <div class="price-wrap rv"><div class={plan.featured ? 'price feat-price' : 'price'}>
+            {plan.badge && <span class="badge-pop">{plan.badge}</span>}
+            <div class="pname">{plan.name}</div>
+            <div class="ptag">{plan.tag}</div>
+            <div class="pprice">{plan.price}<small>{plan.priceSuffix}</small></div>
+            <div class="pfrom">{plan.billing}</div>
+            <ul>
+              {plan.features.map((feature) => (
+                <li><span class="ck">✓</span> {feature}</li>
+              ))}
+            </ul>
+            <a href="/contact" class={plan.featured ? 'btn btn-primary btn-full' : 'btn btn-dark btn-full'}>{plan.ctaLabel}</a>
+          </div></div>
+        ))}
       </div>
-      <p class="price-note rv">Tarifs HT · TVA non applicable, art. 293 B du CGI.</p>
+      <p class="price-note rv">{web.note}</p>
     </div>
   </section>
 
@@ -73,57 +45,32 @@ import Layout from '../layouts/Layout.astro';
     <div class="wrap">
       <h3>Réseaux sociaux</h3>
       <div class="price-grid">
-        <div class="price-wrap rv"><div class="price">
-          <div class="pname">Présence</div>
-          <div class="ptag">Pour exister sur les réseaux, sans y passer vos soirées.</div>
-          <div class="pprice">dès 250 €<small>/mois</small></div>
-          <div class="pfrom">1 réseau · 8 à 10 publications/mois</div>
-          <ul>
-            <li><span class="ck">✓</span> Visuels &amp; textes rédigés pour vous</li>
-            <li><span class="ck">✓</span> Planification &amp; publication</li>
-            <li><span class="ck">✓</span> Vous fournissez les photos, on fait le reste</li>
-          </ul>
-          <a href="/contact" class="btn btn-dark btn-full">En discuter</a>
-        </div></div>
-        <div class="price-wrap rv"><div class="price feat-price">
-          <span class="badge-pop">Le plus adapté TPE</span>
-          <div class="pname">Visibilité</div>
-          <div class="ptag">Le forfait le plus complet pour se faire connaître.</div>
-          <div class="pprice">dès 450 €<small>/mois</small></div>
-          <div class="pfrom">1 à 2 réseaux · 12 à 16 publications/mois</div>
-          <ul>
-            <li><span class="ck">✓</span> Visuels sur-mesure &amp; stories</li>
-            <li><span class="ck">✓</span> Réponses aux commentaires &amp; messages</li>
-            <li><span class="ck">✓</span> Petit reporting mensuel</li>
-          </ul>
-          <a href="/contact" class="btn btn-primary btn-full">En discuter</a>
-        </div></div>
-        <div class="price-wrap rv"><div class="price">
-          <div class="pname">Croissance +</div>
-          <div class="ptag">On se déplace pour filmer et photographier votre commerce.</div>
-          <div class="pprice">dès 800 €<small>/mois</small></div>
-          <div class="pfrom">2 réseaux · contenu soutenu</div>
-          <ul>
-            <li><span class="ck">✓</span> Déplacement shooting photo &amp; vidéo</li>
-            <li><span class="ck">✓</span> Reels &amp; stratégie de contenu</li>
-            <li><span class="ck">✓</span> Reporting détaillé</li>
-          </ul>
-          <a href="/contact" class="btn btn-dark btn-full">En discuter</a>
-        </div></div>
+        {social.plans.map((plan) => (
+          <div class="price-wrap rv"><div class={plan.featured ? 'price feat-price' : 'price'}>
+            {plan.badge && <span class="badge-pop">{plan.badge}</span>}
+            <div class="pname">{plan.name}</div>
+            <div class="ptag">{plan.tag}</div>
+            <div class="pprice">{plan.price}<small>{plan.priceSuffix}</small></div>
+            <div class="pfrom">{plan.billing}</div>
+            <ul>
+              {plan.features.map((feature) => (
+                <li><span class="ck">✓</span> {feature}</li>
+              ))}
+            </ul>
+            <a href="/contact" class={plan.featured ? 'btn btn-primary btn-full' : 'btn btn-dark btn-full'}>{plan.ctaLabel}</a>
+          </div></div>
+        ))}
       </div>
 
       <div class="alacarte rv">
-        <h3 class="alacarte-h">Besoin d'un coup de pouce ponctuel, sans engagement mensuel ?</h3>
+        <h3 class="alacarte-h">{social.alacarteHeading}</h3>
         <ul class="alacarte-list">
-          <li><span>Création de logo</span><strong>120–300 €</strong></li>
-          <li><span>Pack identité visuelle (logo, couleurs, typo)</span><strong>250–500 €</strong></li>
-          <li><span>Kit de templates réseaux (10 modèles)</span><strong>150–350 €</strong></li>
-          <li><span>Création de page Instagram / Facebook</span><strong>sur devis</strong></li>
-          <li><span>Optimisation fiche Google Business</span><strong>80–150 €</strong></li>
-          <li><span>Visuel / post à l'unité</span><strong>15–30 €</strong></li>
+          {social.alacarteItems.map((item) => (
+            <li><span>{item.label}</span><strong>{item.price}</strong></li>
+          ))}
         </ul>
       </div>
-      <p class="price-note rv">Tarifs HT · TVA non applicable, art. 293 B du CGI.</p>
+      <p class="price-note rv">{social.note}</p>
     </div>
   </section>
 
@@ -131,19 +78,13 @@ import Layout from '../layouts/Layout.astro';
   <section>
     <div class="wrap">
       <div class="rv">
-        <div class="sec-eye">Questions fréquentes</div>
-        <h2 class="sec-h" style="margin:0 auto 18px;text-align:center">Les réponses aux questions qu'on nous pose.</h2>
+        <div class="sec-eye">{faq.eyebrow}</div>
+        <h2 class="sec-h" style="margin:0 auto 18px;text-align:center">{faq.title}</h2>
       </div>
       <div class="faq-list">
-        <div class="faq-item"><button class="faq-q">Combien coûte un site ? <span class="pm">+</span></button><div class="faq-a"><p>Chaque projet est sur-mesure. Le prix dépend du nombre de sections, des fonctionnalités et du contenu. Nos formules démarrent à 390 € pour une page vitrine. Le devis est gratuit et sans engagement.</p></div></div>
-        <div class="faq-item"><button class="faq-q">Comment se passe le paiement ? <span class="pm">+</span></button><div class="faq-a"><p>Un petit acompte au démarrage (couvre nos frais), le solde seulement quand le site est en ligne et que vous êtes satisfait. Pas de mauvaise surprise, pas de paiement intégral à l'aveugle.</p></div></div>
-        <div class="faq-item"><button class="faq-q">C'est quoi, la « démo gratuite » ? <span class="pm">+</span></button><div class="faq-a"><p>Avant tout engagement, on conçoit un vrai aperçu de votre site, à votre nom, pour que vous voyiez concrètement le rendu. Vous ne payez que si ça vous plaît et que vous décidez d'aller plus loin.</p></div></div>
-        <div class="faq-item"><button class="faq-q">Et l'hébergement, c'est compris ? <span class="pm">+</span></button><div class="faq-a"><p>La mise en ligne est incluse. L'hébergement et le nom de domaine se souscrivent à votre nom (environ 10 à 15 € par mois selon les options) — vous restez propriétaire de votre site et de votre adresse.</p></div></div>
-        <div class="faq-item"><button class="faq-q">En combien de temps mon site est-il prêt ? <span class="pm">+</span></button><div class="faq-a"><p>Le délai dépend du projet et de la rapidité à nous transmettre vos contenus (photos, textes). Le process est cadré dès le départ, et vous savez à chaque étape où on en est.</p></div></div>
-        <div class="faq-item"><button class="faq-q">Vous intervenez où ? <span class="pm">+</span></button><div class="faq-a"><p>Nous sommes basés à Marseille, et nous accompagnons des commerces partout en France. La majorité du travail — conception, échanges, contenu — se fait à distance ; si vous êtes sur place, on peut aussi se rencontrer en personne.</p></div></div>
-        <div class="faq-item"><button class="faq-q">Je peux refaire un site que j'ai déjà ? <span class="pm">+</span></button><div class="faq-a"><p>Oui. On peut repartir de zéro ou refondre un site existant pour améliorer son image, sa lisibilité sur mobile et sa visibilité sur Google.</p></div></div>
-        <div class="faq-item"><button class="faq-q">Vous gérez aussi nos réseaux sociaux ? <span class="pm">+</span></button><div class="faq-a"><p>Oui, c'est notre deuxième activité : création de contenu, gestion Instagram/Facebook, et même déplacement pour shooting photo ou vidéo selon la formule. On peut s'en occuper seul, ou en complément d'un site.</p></div></div>
-        <div class="faq-item"><button class="faq-q">Forfait mensuel ou prestation ponctuelle, comment choisir ? <span class="pm">+</span></button><div class="faq-a"><p>Si vous voulez juste un coup de pouce ponctuel (logo, visuels, mise en place d'une page), on fait une prestation à l'unité. Si vous voulez une présence régulière et entretenue sur vos réseaux, un forfait mensuel est plus adapté — et plus économique sur la durée.</p></div></div>
+        {faq.items.map((item) => (
+          <div class="faq-item"><button class="faq-q">{item.question} <span class="pm">+</span></button><div class="faq-a"><p>{item.answer}</p></div></div>
+        ))}
       </div>
     </div>
   </section>
@@ -151,9 +92,9 @@ import Layout from '../layouts/Layout.astro';
   <!-- CTA -->
   <section class="contact">
     <div class="wrap cta-band rv">
-      <div class="sec-eye">On en discute ?</div>
-      <h2 class="sec-h">Un devis gratuit, sans engagement.</h2>
-      <a href="/contact" class="btn btn-primary">Demander mon devis →</a>
+      <div class="sec-eye">{finalCta.eyebrow}</div>
+      <h2 class="sec-h">{finalCta.title}</h2>
+      <a href="/contact" class="btn btn-primary">{finalCta.ctaLabel}</a>
     </div>
   </section>
 </Layout>

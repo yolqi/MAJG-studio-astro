@@ -1,17 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const page = await getEntry('nousSommes', 'nous-sommes');
+const { seo, hero, constat, founders, finalCta } = page.data;
 ---
-<Layout
-  title="Nous sommes — MAJG Studio"
-  description="MAJG Studio : deux Marseillais, Jules Grisolle et Alexis Maillan, formés aux sites web et aux réseaux sociaux. Découvrez notre histoire et ce qui nous a amenés à créer MAJG Studio."
-  activePage="nous-sommes"
->
+<Layout title={seo.title} description={seo.description} activePage="nous-sommes">
   <!-- HERO -->
   <header class="hero">
     <div class="wrap hero-solo">
-      <span class="eyebrow">Nous sommes</span>
-      <h1>Deux Marseillais, <em>une idée simple.</em></h1>
-      <p class="lead">Pas une agence anonyme : deux personnes, formées aux mêmes deux métiers, qui ont choisi de les mettre au service des commerces de leur ville.</p>
+      <span class="eyebrow">{hero.eyebrow}</span>
+      <h1>{hero.title} <em>{hero.titleEmphasis}</em></h1>
+      <p class="lead">{hero.lead}</p>
     </div>
   </header>
 
@@ -19,11 +19,11 @@ import Layout from '../layouts/Layout.astro';
   <section>
     <div class="wrap">
       <div class="rv prose">
-        <div class="sec-eye">Le constat de départ</div>
-        <h2 class="sec-h">Des commerces solides, absents en ligne.</h2>
-        <p>Marseille compte des commerces de qualité — coiffeurs, restaurants, instituts, artisans — qui restent pourtant invisibles sur internet. Le problème n'est jamais la qualité du service rendu. C'est l'absence d'une vitrine en ligne à la hauteur de ce travail, ou d'une présence sur les réseaux sociaux capable de le faire connaître.</p>
-        <p>Neuf clients sur dix se renseignent en ligne avant de se déplacer. Un commerce qu'on ne trouve pas en deux clics perd des clients qu'il aurait largement mérité de garder — pas par manque de savoir-faire, mais par manque de visibilité.</p>
-        <p>C'est ce constat, observé autour de nous à Marseille, qui a donné naissance à MAJG Studio.</p>
+        <div class="sec-eye">{constat.eyebrow}</div>
+        <h2 class="sec-h">{constat.title}</h2>
+        {constat.paragraphs.map((paragraph) => (
+          <p>{paragraph}</p>
+        ))}
       </div>
     </div>
   </section>
@@ -32,30 +32,28 @@ import Layout from '../layouts/Layout.astro';
   <section style="background:var(--bg2)">
     <div class="wrap">
       <div class="rv">
-        <div class="sec-eye">Qui sommes-nous</div>
-        <h2 class="sec-h">Deux compétences, une même formation.</h2>
-        <p class="sec-sub">On est deux, on est de Marseille, et on s'est tous les deux formés à la création de sites web et à la gestion de réseaux sociaux. Selon le projet, c'est l'un, l'autre, ou les deux qui s'en occupent — jamais une case fixe attribuée d'avance.</p>
+        <div class="sec-eye">{founders.eyebrow}</div>
+        <h2 class="sec-h">{founders.title}</h2>
+        <p class="sec-sub">{founders.subtitle}</p>
       </div>
       <div class="founders-grid">
-        <div class="founder-card rv">
-          <h3>Jules Grisolle</h3>
-          <p>Jules est dans l'informatique depuis qu'il est enfant — la rigueur technique lui est venue naturellement, bien avant MAJG Studio. Ce qui le motive aujourd'hui : rendre service concrètement, à des commerçants qui en ont besoin.</p>
-        </div>
-        <div class="founder-card rv">
-          <h3>Alexis Maillan</h3>
-          <p>Alexis est à l'aise avec tout le monde. Il sait ce qui donne envie de s'arrêter sur une publication ou de pousser la porte d'un commerce — un sens du contact qui sert directement la manière dont on présente votre activité, en ligne comme sur les réseaux.</p>
-        </div>
+        {founders.people.map((person) => (
+          <div class="founder-card rv">
+            <h3>{person.name}</h3>
+            <p>{person.bio}</p>
+          </div>
+        ))}
       </div>
-      <p class="founders-reveal rv"><strong>Deux compétences, deux personnalités, au service du même projet</strong> : chacun de nous deux peut s'occuper de votre site comme de vos réseaux sociaux. Le nom même de l'entreprise porte cette double appartenance — <strong>M.A.J.G</strong>, pour Maillan Alexis, Jules Grisolle. Mais aussi, et surtout : <strong>Make A Joint Glow</strong>. Faire rayonner, ensemble. C'est exactement ce qu'on cherche à faire pour votre commerce — sur votre site, et sur vos réseaux.</p>
+      <p class="founders-reveal rv">{founders.revealText}</p>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="contact">
     <div class="wrap cta-band rv">
-      <div class="sec-eye">On en discute ?</div>
-      <h2 class="sec-h">Parlons de votre commerce.</h2>
-      <a href="/contact" class="btn btn-primary">Demander ma démo gratuite →</a>
+      <div class="sec-eye">{finalCta.eyebrow}</div>
+      <h2 class="sec-h">{finalCta.title}</h2>
+      <a href={finalCta.ctaHref} class="btn btn-primary">{finalCta.ctaLabel}</a>
     </div>
   </section>
 </Layout>

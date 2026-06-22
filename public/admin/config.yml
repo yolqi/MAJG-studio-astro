@@ -254,3 +254,368 @@ collections:
               - { label: Titre, name: title, widget: string }
               - { label: "Bouton — texte", name: ctaLabel, widget: string }
               - { label: "Bouton — lien", name: ctaHref, widget: string }
+
+      - name: contact
+        label: Contact
+        file: src/content/pages/contact.yaml
+        fields:
+          - label: Référencement (SEO)
+            name: seo
+            widget: object
+            fields:
+              - { label: "Titre de l'onglet du navigateur", name: title, widget: string }
+              - { label: "Description (résultats Google)", name: description, widget: text }
+          - label: Introduction
+            name: intro
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Sous-titre, name: subtitle, widget: text }
+          - label: "Encarts d'information"
+            name: infoItems
+            widget: list
+            fields:
+              - { label: Nom, name: label, widget: string }
+              - { label: Valeur, name: value, widget: string }
+
+      - name: tarifs
+        label: Tarifs
+        file: src/content/pages/tarifs.yaml
+        fields:
+          - label: Référencement (SEO)
+            name: seo
+            widget: object
+            fields:
+              - { label: "Titre de l'onglet du navigateur", name: title, widget: string }
+              - { label: "Description (résultats Google)", name: description, widget: text }
+          - label: Introduction
+            name: intro
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: "Titre — première partie", name: title, widget: string }
+              - { label: "Titre — fin mise en valeur", name: titleEmphasis, widget: string }
+              - { label: "Texte d'introduction", name: lead, widget: text }
+          - label: "Formules — Sites web"
+            name: web
+            widget: object
+            fields:
+              - label: Formules
+                name: plans
+                widget: list
+                fields:
+                  - { label: Nom, name: name, widget: string }
+                  - { label: "Badge (optionnel)", name: badge, widget: string, required: false }
+                  - { label: Accroche, name: tag, widget: string }
+                  - { label: Prix, name: price, widget: string }
+                  - { label: "Suffixe du prix (ex. /mois, ou vide)", name: priceSuffix, widget: string, required: false }
+                  - { label: Détail, name: billing, widget: string }
+                  - { label: "Liste des fonctionnalités", name: features, widget: list, field: { label: Fonctionnalité, name: feature, widget: string } }
+                  - { label: "Texte du bouton", name: ctaLabel, widget: string }
+                  - { label: "Mise en avant (formule la plus visible)", name: featured, widget: boolean, default: false }
+              - { label: "Note tarifaire", name: note, widget: string }
+          - label: "Formules — Réseaux sociaux"
+            name: social
+            widget: object
+            fields:
+              - label: Formules
+                name: plans
+                widget: list
+                fields:
+                  - { label: Nom, name: name, widget: string }
+                  - { label: "Badge (optionnel)", name: badge, widget: string, required: false }
+                  - { label: Accroche, name: tag, widget: string }
+                  - { label: Prix, name: price, widget: string }
+                  - { label: "Suffixe du prix (ex. /mois, ou vide)", name: priceSuffix, widget: string, required: false }
+                  - { label: Détail, name: billing, widget: string }
+                  - { label: "Liste des fonctionnalités", name: features, widget: list, field: { label: Fonctionnalité, name: feature, widget: string } }
+                  - { label: "Texte du bouton", name: ctaLabel, widget: string }
+                  - { label: "Mise en avant (formule la plus visible)", name: featured, widget: boolean, default: false }
+              - { label: "Titre du bloc à la carte", name: alacarteHeading, widget: string }
+              - label: "Prestations à la carte"
+                name: alacarteItems
+                widget: list
+                fields:
+                  - { label: Nom, name: label, widget: string }
+                  - { label: Prix, name: price, widget: string }
+              - { label: "Note tarifaire", name: note, widget: string }
+          - label: "Questions fréquentes"
+            name: faq
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - label: Questions
+                name: items
+                widget: list
+                fields:
+                  - { label: Question, name: question, widget: string }
+                  - { label: Réponse, name: answer, widget: text }
+          - label: "Appel à l'action final"
+            name: finalCta
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: "Bouton — texte", name: ctaLabel, widget: string }
+              - { label: "Bouton — lien", name: ctaHref, widget: string }
+
+      - name: sitesWeb
+        label: "Sites Web"
+        file: src/content/pages/sites-web.yaml
+        fields:
+          - label: Référencement (SEO)
+            name: seo
+            widget: object
+            fields:
+              - { label: "Titre de l'onglet du navigateur", name: title, widget: string }
+              - { label: "Description (résultats Google)", name: description, widget: text }
+          - label: "Section d'en-tête (Hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: "Titre — fin mise en valeur", name: titleEmphasis, widget: string }
+              - { label: "Texte d'introduction", name: lead, widget: text }
+              - { label: "Bouton principal — texte", name: ctaPrimaryLabel, widget: string }
+              - { label: "Bouton principal — lien", name: ctaPrimaryHref, widget: string }
+              - { label: "Bouton secondaire — texte", name: ctaGhostLabel, widget: string }
+              - { label: "Bouton secondaire — lien", name: ctaGhostHref, widget: string }
+          - label: "Section — Pour qui"
+            name: audience
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: "Titre — première partie", name: title, widget: string }
+              - { label: "Titre — partie mise en valeur", name: titleEmphasis, widget: string }
+              - { label: "Titre — fin de phrase", name: titleSuffix, widget: string }
+              - { label: Sous-titre, name: subtitle, widget: text }
+              - label: Cartes
+                name: items
+                widget: list
+                fields:
+                  - { label: Numéro, name: number, widget: string }
+                  - { label: Titre, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+          - label: "Section — Pourquoi MAJG"
+            name: why
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Sous-titre, name: subtitle, widget: text }
+              - label: Arguments
+                name: items
+                widget: list
+                fields:
+                  - { label: "Icône (un caractère/symbole)", name: icon, widget: string }
+                  - { label: Titre, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+          - label: "Section étapes (process)"
+            name: process
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Sous-titre, name: subtitle, widget: text }
+              - label: Étapes
+                name: steps
+                widget: list
+                fields:
+                  - { label: Numéro, name: number, widget: string }
+                  - { label: Titre, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+          - label: "Section en profondeur"
+            name: deepDive
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Paragraphes, name: paragraphs, widget: list, field: { label: Paragraphe, name: paragraph, widget: text } }
+          - label: "Teaser tarifs"
+            name: pricingTeaser
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Sous-titre, name: subtitle, widget: text }
+              - { label: "Bouton — texte", name: ctaLabel, widget: string }
+              - { label: "Bouton — lien", name: ctaHref, widget: string }
+
+      - name: reseauxSociaux
+        label: "Réseaux Sociaux"
+        file: src/content/pages/reseaux-sociaux.yaml
+        fields:
+          - label: Référencement (SEO)
+            name: seo
+            widget: object
+            fields:
+              - { label: "Titre de l'onglet du navigateur", name: title, widget: string }
+              - { label: "Description (résultats Google)", name: description, widget: text }
+          - label: "Section d'en-tête (Hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: "Titre — fin mise en valeur", name: titleEmphasis, widget: string }
+              - { label: "Texte d'introduction", name: lead, widget: text }
+              - { label: "Bouton principal — texte", name: ctaPrimaryLabel, widget: string }
+              - { label: "Bouton principal — lien", name: ctaPrimaryHref, widget: string }
+              - { label: "Bouton secondaire — texte", name: ctaGhostLabel, widget: string }
+              - { label: "Bouton secondaire — lien", name: ctaGhostHref, widget: string }
+          - label: "Section — Ce qu'on fait"
+            name: whatWeDo
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Sous-titre, name: subtitle, widget: text }
+              - label: Cartes
+                name: items
+                widget: list
+                fields:
+                  - { label: Numéro, name: number, widget: string }
+                  - { label: Titre, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+          - label: "Aperçu du feed Instagram"
+            name: feedPreview
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Badge, name: badge, widget: string }
+              - { label: "Titre du feed", name: feedTitle, widget: string }
+              - { label: "Liste à puces", name: bullets, widget: list, field: { label: Puce, name: bullet, widget: string } }
+          - label: "Phrase différenciatrice"
+            name: pitch
+            widget: object
+            fields:
+              - { label: Texte, name: text, widget: text }
+          - label: "Teaser tarifs"
+            name: pricingTeaser
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Sous-titre, name: subtitle, widget: text }
+              - { label: "Bouton — texte", name: ctaLabel, widget: string }
+              - { label: "Bouton — lien", name: ctaHref, widget: string }
+
+      - name: nousSommes
+        label: "Nous sommes"
+        file: src/content/pages/nous-sommes.yaml
+        fields:
+          - label: Référencement (SEO)
+            name: seo
+            widget: object
+            fields:
+              - { label: "Titre de l'onglet du navigateur", name: title, widget: string }
+              - { label: "Description (résultats Google)", name: description, widget: text }
+          - label: "Section d'en-tête (Hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: "Titre — fin mise en valeur", name: titleEmphasis, widget: string }
+              - { label: "Texte d'introduction", name: lead, widget: text }
+          - label: "Le constat"
+            name: constat
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Paragraphes, name: paragraphs, widget: list, field: { label: Paragraphe, name: paragraph, widget: text } }
+          - label: Fondateurs
+            name: founders
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Sous-titre, name: subtitle, widget: text }
+              - label: Personnes
+                name: people
+                widget: list
+                fields:
+                  - { label: Nom, name: name, widget: string }
+                  - { label: Biographie, name: bio, widget: text }
+              - { label: "Paragraphe de conclusion", name: revealText, widget: text }
+          - label: "Appel à l'action final"
+            name: finalCta
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: "Bouton — texte", name: ctaLabel, widget: string }
+              - { label: "Bouton — lien", name: ctaHref, widget: string }
+
+      - name: mentionsLegales
+        label: "Mentions légales"
+        file: src/content/pages/mentions-legales.yaml
+        fields:
+          - label: Référencement (SEO)
+            name: seo
+            widget: object
+            fields:
+              - { label: "Titre de l'onglet du navigateur", name: title, widget: string }
+              - { label: "Description (résultats Google)", name: description, widget: text }
+          - label: Introduction
+            name: intro
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+          - label: "Éditeur du site"
+            name: editeur
+            widget: object
+            fields:
+              - { label: Titre de section, name: heading, widget: string }
+              - { label: "Premier paragraphe", name: paragraph1, widget: text }
+              - { label: "Lignes d'adresse", name: addressLines, widget: list, field: { label: Ligne, name: line, widget: string } }
+              - { label: "Dernier paragraphe", name: paragraph3, widget: text }
+          - label: Hébergeur
+            name: hebergeur
+            widget: object
+            fields:
+              - { label: Titre de section, name: heading, widget: string }
+              - { label: "Lignes d'adresse", name: addressLines, widget: list, field: { label: Ligne, name: line, widget: string } }
+          - label: "Propriété intellectuelle"
+            name: propriete
+            widget: object
+            fields:
+              - { label: Titre de section, name: heading, widget: string }
+              - { label: Paragraphe, name: paragraph, widget: text }
+          - label: "Données personnelles"
+            name: donneesPerso
+            widget: object
+            fields:
+              - { label: Titre de section, name: heading, widget: string }
+              - { label: "Texte avant le lien", name: text, widget: text }
+              - { label: "Lien — texte", name: linkLabel, widget: string }
+              - { label: "Lien — URL", name: linkHref, widget: string }
+
+      - name: politiqueConfidentialite
+        label: "Politique de confidentialité"
+        file: src/content/pages/politique-confidentialite.yaml
+        fields:
+          - label: Référencement (SEO)
+            name: seo
+            widget: object
+            fields:
+              - { label: "Titre de l'onglet du navigateur", name: title, widget: string }
+              - { label: "Description (résultats Google)", name: description, widget: text }
+          - label: Introduction
+            name: intro
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - { label: Titre, name: heading, widget: string }
+              - { label: Paragraphes, name: paragraphs, widget: list, field: { label: Paragraphe, name: paragraph, widget: text } }

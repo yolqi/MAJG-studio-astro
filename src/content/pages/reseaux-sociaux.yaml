@@ -1,0 +1,45 @@
+seo:
+  title: "Réseaux Sociaux — MAJG Studio"
+  description: "Gestion et création de contenu Instagram & Facebook pour commerçants, partout en France. Visuels, publications, community management, forfaits mensuels ou prestations ponctuelles."
+
+hero:
+  eyebrow: "Réseaux Sociaux"
+  title: "On maîtrise les réseaux sociaux."
+  titleEmphasis: "On met cette maîtrise au service de votre commerce."
+  lead: "Vous n'avez pas le temps de gérer cela en plus de votre activité — et une enseigne nationale ne connaîtra jamais votre quartier comme nous. On s'occupe de votre Instagram et Facebook, vous vous occupez de votre commerce."
+  ctaPrimaryLabel: "Demander une démo →"
+  ctaPrimaryHref: "/contact"
+  ctaGhostLabel: "Voir les tarifs"
+  ctaGhostHref: "/tarifs#social"
+
+whatWeDo:
+  eyebrow: "Ce qu'on fait concrètement"
+  title: "Pas juste « on gère vos réseaux ». Voici quoi, exactement."
+  subtitle: "Quatre métiers en un, pour que votre présence en ligne ne soit pas juste vivante, mais utile."
+  items:
+    - { number: "01", title: "Création de contenu", description: "Visuels, légendes, cohérence visuelle — chaque publication ressemble à votre commerce, pas à un modèle générique." }
+    - { number: "02", title: "Publication & planification", description: "Un calendrier, les bons horaires, de la régularité. Votre présence ne s'arrête jamais, même quand vous êtes débordé." }
+    - { number: "03", title: "Community management", description: "Réponses aux commentaires et aux messages, modération — on garde la relation avec vos clients vivante." }
+    - { number: "04", title: "Reporting", description: "Ce qui marche, ce qu'on ajuste. Pas de chiffres pour la forme : des décisions concrètes pour la suite." }
+
+feedPreview:
+  eyebrow: "À quoi ça pourrait ressembler"
+  title: "Un feed qui se reconnaît du premier coup d'œil."
+  badge: "Exemple de style"
+  feedTitle: "À quoi pourrait ressembler votre feed."
+  bullets:
+    - "Chaque case représente une publication (photo, story ou reel)"
+    - "Une palette de couleurs cohérente, propre à votre commerce"
+    - "Un style reconnaissable, même sans voir le nom du compte"
+    - "Une régularité qui donne confiance aux visiteurs"
+    - "Pas un vrai compte client : un exemple de direction visuelle"
+
+pitch:
+  text: "Nous ne sommes pas une agence avec 50 clients en portefeuille. Nous sommes deux, et votre commerce compte vraiment."
+
+pricingTeaser:
+  eyebrow: "Tarifs"
+  title: "Forfait mensuel, ou coup de pouce ponctuel."
+  subtitle: "Présence, Visibilité ou Croissance+ : trois forfaits, plus des prestations à la carte sans engagement."
+  ctaLabel: "Voir les tarifs réseaux sociaux →"
+  ctaHref: "/tarifs#social"

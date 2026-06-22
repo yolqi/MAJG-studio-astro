@@ -1,0 +1,35 @@
+seo:
+  title: "Mentions légales — MAJG Studio"
+  description: "Mentions légales du site MAJG Studio."
+
+intro:
+  eyebrow: "Informations légales"
+  title: "Mentions légales."
+
+editeur:
+  heading: "Éditeur du site"
+  paragraph1: "Le présent site est édité par MAJG Studio, exploité par Jules Grisolle et Alexis Maillan."
+  addressLines:
+    - "Statut juridique : [à compléter — ex. Entrepreneur individuel (EI), auto-entrepreneur, ou société]"
+    - "Adresse : [adresse complète à compléter]"
+    - "Téléphone : [numéro à compléter]"
+    - "Email : contact@majg-studio.fr"
+    - "SIRET : [numéro SIRET à compléter]"
+  paragraph3: "Directeur de la publication : Jules Grisolle & Alexis Maillan."
+
+hebergeur:
+  heading: "Hébergeur"
+  addressLines:
+    - "Le site est hébergé par : [nom de l'hébergeur à compléter]"
+    - "Adresse : [adresse complète de l'hébergeur à compléter]"
+    - "Téléphone : [téléphone de l'hébergeur à compléter]"
+
+propriete:
+  heading: "Propriété intellectuelle"
+  paragraph: "L'ensemble du contenu de ce site (textes, images, logos) est protégé par le droit d'auteur. Toute reproduction sans autorisation écrite préalable est interdite."
+
+donneesPerso:
+  heading: "Données personnelles"
+  text: "Le traitement des données personnelles collectées sur ce site est décrit dans notre"
+  linkLabel: "politique de confidentialité"
+  linkHref: "/politique-confidentialite"

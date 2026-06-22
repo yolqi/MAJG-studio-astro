@@ -1,20 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const page = await getEntry('sitesWeb', 'sites-web');
+const { seo, hero, audience, why, process: howItWorks, deepDive, pricingTeaser } = page.data;
 ---
-<Layout
-  title="Sites Web — MAJG Studio"
-  description="Création de sites web sur-mesure pour commerçants et artisans, partout en France : coiffeurs, restaurants, gîtes, hôtels, instituts, artisans. Démo gratuite avant tout engagement."
-  activePage="sites-web"
->
+<Layout title={seo.title} description={seo.description} activePage="sites-web">
   <!-- HERO -->
   <header class="hero">
     <div class="wrap hero-solo">
-      <span class="eyebrow">Sites Web</span>
-      <h1>Un site, ce n'est pas de la décoration. <em>C'est un outil commercial.</em></h1>
-      <p class="lead">Clair pour vos clients, pensé pour transformer une visite en appel ou en réservation. On vous montre une démo avant que vous décidiez quoi que ce soit.</p>
+      <span class="eyebrow">{hero.eyebrow}</span>
+      <h1>{hero.title} <em>{hero.titleEmphasis}</em></h1>
+      <p class="lead">{hero.lead}</p>
       <div class="hero-actions">
-        <a href="/contact" class="btn btn-primary">Demander ma démo →</a>
-        <a href="/tarifs#sites" class="btn btn-ghost">Voir les tarifs</a>
+        <a href={hero.ctaPrimaryHref} class="btn btn-primary">{hero.ctaPrimaryLabel}</a>
+        <a href={hero.ctaGhostHref} class="btn btn-ghost">{hero.ctaGhostLabel}</a>
       </div>
     </div>
   </header>
@@ -23,15 +23,14 @@ import Layout from '../layouts/Layout.astro';
   <section>
     <div class="wrap">
       <div class="rv">
-        <div class="sec-eye">Pour qui</div>
-        <h2 class="sec-h">Un site pensé pour <em>votre activité</em>, pas pour une autre.</h2>
-        <p class="sec-sub">Pas de modèle générique. Chaque site est conçu autour de votre activité, de vos clients et de votre quartier.</p>
+        <div class="sec-eye">{audience.eyebrow}</div>
+        <h2 class="sec-h">{audience.title} <em>{audience.titleEmphasis}</em>{audience.titleSuffix}</h2>
+        <p class="sec-sub">{audience.subtitle}</p>
       </div>
       <div class="svc-grid">
-        <div class="svc-card rv"><div class="svc-num">01</div><h3>Commerces &amp; salons</h3><p>Vitrine soignée, présentation de vos prestations et tarifs, horaires, bouton d'appel direct. Un site qui rassure et donne envie de pousser la porte.</p></div>
-        <div class="svc-card rv"><div class="svc-num">02</div><h3>Artisans &amp; indépendants</h3><p>Vos services, votre zone d'intervention, un formulaire de contact clair. Vos clients vous trouvent, vous contactent, vous choisissent.</p></div>
-        <div class="svc-card rv"><div class="svc-num">03</div><h3>Restaurants, gîtes &amp; hôtels</h3><p>Menu ou présentation des chambres, ambiance en photos, accès et horaires. Une vitrine qui donne confiance avant même la première réservation.</p></div>
-        <div class="svc-card rv"><div class="svc-num">04</div><h3>Bases solides pour Google</h3><p>Votre site est structuré pour que Google le comprenne dès la mise en ligne. Le référencement prend du temps — on pose les bonnes bases dès le départ, sans promesse de classement du jour au lendemain.</p></div>
+        {audience.items.map((item) => (
+          <div class="svc-card rv"><div class="svc-num">{item.number}</div><h3>{item.title}</h3><p>{item.description}</p></div>
+        ))}
       </div>
     </div>
   </section>
@@ -40,17 +39,14 @@ import Layout from '../layouts/Layout.astro';
   <section class="features">
     <div class="wrap">
       <div class="rv">
-        <div class="sec-eye">Pourquoi MAJG Studio</div>
-        <h2 class="sec-h">Tout est inclus. Vous n'avez rien à gérer.</h2>
-        <p class="sec-sub">On s'occupe de la technique pour que vous restiez concentré sur votre métier.</p>
+        <div class="sec-eye">{why.eyebrow}</div>
+        <h2 class="sec-h">{why.title}</h2>
+        <p class="sec-sub">{why.subtitle}</p>
       </div>
       <div class="feat-grid">
-        <div class="feat rv"><div class="ic">✦</div><h4>Design sur-mesure</h4><p>Couleurs, typographie, structure — chaque détail est pensé pour vous, pas sorti d'un modèle.</p></div>
-        <div class="feat rv"><div class="ic">◎</div><h4>Pensé pour Google</h4><p>Structure, vitesse, mobile : les critères que Google regarde. Le classement vient avec le temps, la base est là dès le premier jour.</p></div>
-        <div class="feat rv"><div class="ic">▢</div><h4>Parfait sur mobile</h4><p>Impeccable sur téléphone, tablette et ordinateur — là où vos clients regardent.</p></div>
-        <div class="feat rv"><div class="ic">↻</div><h4>Hébergement &amp; entretien</h4><p>Mise en ligne, sauvegardes, sécurité : le site tourne, on s'en occupe.</p></div>
-        <div class="feat rv"><div class="ic">◷</div><h4>Délai clair</h4><p>Un process simple, du premier échange à la mise en ligne. Vous savez toujours où on en est.</p></div>
-        <div class="feat rv"><div class="ic">♕</div><h4>Un seul interlocuteur</h4><p>Pas de sous-traitance, pas de ticket anonyme. Vous parlez directement à la personne qui réalise votre site.</p></div>
+        {why.items.map((item) => (
+          <div class="feat rv"><div class="ic">{item.icon}</div><h4>{item.title}</h4><p>{item.description}</p></div>
+        ))}
       </div>
     </div>
   </section>
@@ -59,14 +55,14 @@ import Layout from '../layouts/Layout.astro';
   <section class="proc">
     <div class="wrap">
       <div class="rv">
-        <div class="sec-eye">Comment ça se passe</div>
-        <h2 class="sec-h">Simple, du début à la mise en ligne.</h2>
-        <p class="sec-sub">Trois étapes, et un interlocuteur unique tout du long.</p>
+        <div class="sec-eye">{howItWorks.eyebrow}</div>
+        <h2 class="sec-h">{howItWorks.title}</h2>
+        <p class="sec-sub">{howItWorks.subtitle}</p>
       </div>
       <div class="proc-grid">
-        <div class="proc-step rv"><div class="n">01</div><h4>On vous montre une démo</h4><p>On conçoit un premier aperçu de votre site, à votre nom, pour que vous voyiez concrètement le rendu. Gratuit et sans engagement.</p></div>
-        <div class="proc-step rv"><div class="n">02</div><h4>On l'affine ensemble</h4><p>Vos photos, vos textes, vos couleurs : on ajuste jusqu'à ce que le site vous ressemble vraiment.</p></div>
-        <div class="proc-step rv"><div class="n">03</div><h4>Votre site est en ligne</h4><p>Petit acompte au lancement pour démarrer, solde seulement quand vous êtes satisfait du résultat. On reste disponible après.</p></div>
+        {howItWorks.steps.map((step) => (
+          <div class="proc-step rv"><div class="n">{step.number}</div><h4>{step.title}</h4><p>{step.description}</p></div>
+        ))}
       </div>
     </div>
   </section>
@@ -75,11 +71,11 @@ import Layout from '../layouts/Layout.astro';
   <section>
     <div class="wrap">
       <div class="rv prose">
-        <div class="sec-eye">En profondeur</div>
-        <h2 class="sec-h">Pourquoi ces détails comptent vraiment.</h2>
-        <p>Le référencement, ça ne se décrète pas le jour de la mise en ligne — ça se construit sur plusieurs mois. Ce qu'on fait dès le départ : une structure propre, des informations claires, un site rapide. Les bases que Google demande pour vous faire confiance, petit à petit. Et en attendant que le site monte naturellement, c'est exactement là que les réseaux sociaux prennent le relais : eux, ils vous rendent visible tout de suite.</p>
-        <p>Un site illisible sur mobile, c'est un client perdu en quelques secondes : plus de la moitié des recherches locales se font depuis un téléphone, dans la rue, juste avant de pousser une porte. Si le site rame ou casse l'affichage, ce client se tourne vers un autre commerce.</p>
-        <p>Et un CMS pour gérer son contenu soi-même, c'est la différence entre solliciter quelqu'un pour changer une photo ou un horaire, et le faire en deux minutes, seul, quand on le souhaite. C'est ce qui rend un site vraiment utile sur la durée — pas seulement soigné le jour de la mise en ligne.</p>
+        <div class="sec-eye">{deepDive.eyebrow}</div>
+        <h2 class="sec-h">{deepDive.title}</h2>
+        {deepDive.paragraphs.map((paragraph) => (
+          <p>{paragraph}</p>
+        ))}
       </div>
     </div>
   </section>
@@ -87,10 +83,10 @@ import Layout from '../layouts/Layout.astro';
   <!-- TEASER TARIFS -->
   <section style="background:var(--bg2)">
     <div class="wrap cta-band rv">
-      <div class="sec-eye">Tarifs</div>
-      <h2 class="sec-h">Des formules claires, dès le départ.</h2>
-      <p class="sec-sub">Essentiel, Vitrine ou Sur-mesure+ : trois points de départ, un devis gratuit et adapté à votre activité.</p>
-      <a href="/tarifs#sites" class="btn btn-primary">Voir les tarifs sites web →</a>
+      <div class="sec-eye">{pricingTeaser.eyebrow}</div>
+      <h2 class="sec-h">{pricingTeaser.title}</h2>
+      <p class="sec-sub">{pricingTeaser.subtitle}</p>
+      <a href={pricingTeaser.ctaHref} class="btn btn-primary">{pricingTeaser.ctaLabel}</a>
     </div>
   </section>
 </Layout>

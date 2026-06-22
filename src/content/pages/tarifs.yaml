@@ -1,0 +1,128 @@
+seo:
+  title: "Tarifs — MAJG Studio"
+  description: "Tous nos tarifs : sites web et réseaux sociaux, formules claires, prix dès le départ. Devis gratuit."
+
+intro:
+  eyebrow: "Tarifs"
+  title: "Deux métiers, deux grilles."
+  titleEmphasis: "Clair, dès le départ."
+  lead: "Chaque projet est sur-mesure : ces formules sont des points de départ. Le devis est gratuit et adapté à votre activité."
+
+web:
+  plans:
+    - name: "Essentiel"
+      tag: "Pour exister en ligne, simplement."
+      price: "dès 390 €"
+      priceSuffix: ""
+      billing: "site une page · paiement unique"
+      features:
+        - "Site vitrine d'une page soignée"
+        - "Vos infos, horaires, contact"
+        - "Bouton d'appel direct"
+        - "Parfait sur mobile"
+        - "Mise en ligne incluse"
+      ctaLabel: "Demander une démo"
+      featured: false
+    - name: "Vitrine"
+      badge: "Le plus choisi"
+      tag: "Le bon équilibre pour un commerce."
+      price: "dès 690 €"
+      priceSuffix: ""
+      billing: "3 à 5 sections · paiement unique"
+      features:
+        - "Tout l'Essentiel, en plus complet"
+        - "Plusieurs sections (prestations, galerie…)"
+        - "Formulaire de contact"
+        - "SEO local & bases pour Google"
+        - "CMS pour gérer votre contenu"
+        - "Nom de domaine accompagné"
+      ctaLabel: "Demander une démo"
+      featured: true
+    - name: "Sur-mesure +"
+      tag: "Pour un projet plus ambitieux."
+      price: "dès 1 500 €"
+      priceSuffix: ""
+      billing: "fonctionnalités avancées"
+      features:
+        - "Tout le pack Vitrine"
+        - "Réservation / prise de RDV en ligne"
+        - "Pages & contenus multiples"
+        - "Animations & fonctionnalités sur-mesure"
+      ctaLabel: "Parler du projet"
+      featured: false
+  note: "Tarifs HT · TVA non applicable, art. 293 B du CGI."
+
+social:
+  plans:
+    - name: "Présence"
+      tag: "Pour exister sur les réseaux, sans y passer vos soirées."
+      price: "dès 250 €"
+      priceSuffix: "/mois"
+      billing: "1 réseau · 8 à 10 publications/mois"
+      features:
+        - "Visuels & textes rédigés pour vous"
+        - "Planification & publication"
+        - "Vous fournissez les photos, on fait le reste"
+      ctaLabel: "En discuter"
+      featured: false
+    - name: "Visibilité"
+      badge: "Le plus adapté TPE"
+      tag: "Le forfait le plus complet pour se faire connaître."
+      price: "dès 450 €"
+      priceSuffix: "/mois"
+      billing: "1 à 2 réseaux · 12 à 16 publications/mois"
+      features:
+        - "Visuels sur-mesure & stories"
+        - "Réponses aux commentaires & messages"
+        - "Petit reporting mensuel"
+      ctaLabel: "En discuter"
+      featured: true
+    - name: "Croissance +"
+      tag: "On se déplace pour filmer et photographier votre commerce."
+      price: "dès 800 €"
+      priceSuffix: "/mois"
+      billing: "2 réseaux · contenu soutenu"
+      features:
+        - "Déplacement shooting photo & vidéo"
+        - "Reels & stratégie de contenu"
+        - "Reporting détaillé"
+      ctaLabel: "En discuter"
+      featured: false
+  alacarteHeading: "Besoin d'un coup de pouce ponctuel, sans engagement mensuel ?"
+  alacarteItems:
+    - { label: "Création de logo", price: "120–300 €" }
+    - { label: "Pack identité visuelle (logo, couleurs, typo)", price: "250–500 €" }
+    - { label: "Kit de templates réseaux (10 modèles)", price: "150–350 €" }
+    - { label: "Création de page Instagram / Facebook", price: "sur devis" }
+    - { label: "Optimisation fiche Google Business", price: "80–150 €" }
+    - { label: "Visuel / post à l'unité", price: "15–30 €" }
+  note: "Tarifs HT · TVA non applicable, art. 293 B du CGI."
+
+faq:
+  eyebrow: "Questions fréquentes"
+  title: "Les réponses aux questions qu'on nous pose."
+  items:
+    - question: "Combien coûte un site ?"
+      answer: "Chaque projet est sur-mesure. Le prix dépend du nombre de sections, des fonctionnalités et du contenu. Nos formules démarrent à 390 € pour une page vitrine. Le devis est gratuit et sans engagement."
+    - question: "Comment se passe le paiement ?"
+      answer: "Un petit acompte au démarrage (couvre nos frais), le solde seulement quand le site est en ligne et que vous êtes satisfait. Pas de mauvaise surprise, pas de paiement intégral à l'aveugle."
+    - question: "C'est quoi, la « démo gratuite » ?"
+      answer: "Avant tout engagement, on conçoit un vrai aperçu de votre site, à votre nom, pour que vous voyiez concrètement le rendu. Vous ne payez que si ça vous plaît et que vous décidez d'aller plus loin."
+    - question: "Et l'hébergement, c'est compris ?"
+      answer: "La mise en ligne est incluse. L'hébergement et le nom de domaine se souscrivent à votre nom (environ 10 à 15 € par mois selon les options) — vous restez propriétaire de votre site et de votre adresse."
+    - question: "En combien de temps mon site est-il prêt ?"
+      answer: "Le délai dépend du projet et de la rapidité à nous transmettre vos contenus (photos, textes). Le process est cadré dès le départ, et vous savez à chaque étape où on en est."
+    - question: "Vous intervenez où ?"
+      answer: "Nous sommes basés à Marseille, et nous accompagnons des commerces partout en France. La majorité du travail — conception, échanges, contenu — se fait à distance ; si vous êtes sur place, on peut aussi se rencontrer en personne."
+    - question: "Je peux refaire un site que j'ai déjà ?"
+      answer: "Oui. On peut repartir de zéro ou refondre un site existant pour améliorer son image, sa lisibilité sur mobile et sa visibilité sur Google."
+    - question: "Vous gérez aussi nos réseaux sociaux ?"
+      answer: "Oui, c'est notre deuxième activité : création de contenu, gestion Instagram/Facebook, et même déplacement pour shooting photo ou vidéo selon la formule. On peut s'en occuper seul, ou en complément d'un site."
+    - question: "Forfait mensuel ou prestation ponctuelle, comment choisir ?"
+      answer: "Si vous voulez juste un coup de pouce ponctuel (logo, visuels, mise en place d'une page), on fait une prestation à l'unité. Si vous voulez une présence régulière et entretenue sur vos réseaux, un forfait mensuel est plus adapté — et plus économique sur la durée."
+
+finalCta:
+  eyebrow: "On en discute ?"
+  title: "Un devis gratuit, sans engagement."
+  ctaLabel: "Demander mon devis →"
+  ctaHref: "/contact"

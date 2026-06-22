@@ -1,20 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const page = await getEntry('reseauxSociaux', 'reseaux-sociaux');
+const { seo, hero, whatWeDo, feedPreview, pitch, pricingTeaser } = page.data;
 ---
-<Layout
-  title="Réseaux Sociaux — MAJG Studio"
-  description="Gestion et création de contenu Instagram & Facebook pour commerçants, partout en France. Visuels, publications, community management, forfaits mensuels ou prestations ponctuelles."
-  activePage="reseaux-sociaux"
->
+<Layout title={seo.title} description={seo.description} activePage="reseaux-sociaux">
   <!-- HERO -->
   <header class="hero">
     <div class="wrap hero-solo">
-      <span class="eyebrow">Réseaux Sociaux</span>
-      <h1>On maîtrise les réseaux sociaux. <em>On met cette maîtrise au service de votre commerce.</em></h1>
-      <p class="lead">Vous n'avez pas le temps de gérer cela en plus de votre activité — et une enseigne nationale ne connaîtra jamais votre quartier comme nous. On s'occupe de votre Instagram et Facebook, vous vous occupez de votre commerce.</p>
+      <span class="eyebrow">{hero.eyebrow}</span>
+      <h1>{hero.title} <em>{hero.titleEmphasis}</em></h1>
+      <p class="lead">{hero.lead}</p>
       <div class="hero-actions">
-        <a href="/contact" class="btn btn-primary">Demander une démo →</a>
-        <a href="/tarifs#social" class="btn btn-ghost">Voir les tarifs</a>
+        <a href={hero.ctaPrimaryHref} class="btn btn-primary">{hero.ctaPrimaryLabel}</a>
+        <a href={hero.ctaGhostHref} class="btn btn-ghost">{hero.ctaGhostLabel}</a>
       </div>
     </div>
   </header>
@@ -23,15 +23,14 @@ import Layout from '../layouts/Layout.astro';
   <section>
     <div class="wrap">
       <div class="rv">
-        <div class="sec-eye">Ce qu'on fait concrètement</div>
-        <h2 class="sec-h">Pas juste « on gère vos réseaux ». Voici quoi, exactement.</h2>
-        <p class="sec-sub">Quatre métiers en un, pour que votre présence en ligne ne soit pas juste vivante, mais utile.</p>
+        <div class="sec-eye">{whatWeDo.eyebrow}</div>
+        <h2 class="sec-h">{whatWeDo.title}</h2>
+        <p class="sec-sub">{whatWeDo.subtitle}</p>
       </div>
       <div class="svc-grid">
-        <div class="svc-card rv"><div class="svc-num">01</div><h3>Création de contenu</h3><p>Visuels, légendes, cohérence visuelle — chaque publication ressemble à votre commerce, pas à un modèle générique.</p></div>
-        <div class="svc-card rv"><div class="svc-num">02</div><h3>Publication &amp; planification</h3><p>Un calendrier, les bons horaires, de la régularité. Votre présence ne s'arrête jamais, même quand vous êtes débordé.</p></div>
-        <div class="svc-card rv"><div class="svc-num">03</div><h3>Community management</h3><p>Réponses aux commentaires et aux messages, modération — on garde la relation avec vos clients vivante.</p></div>
-        <div class="svc-card rv"><div class="svc-num">04</div><h3>Reporting</h3><p>Ce qui marche, ce qu'on ajuste. Pas de chiffres pour la forme : des décisions concrètes pour la suite.</p></div>
+        {whatWeDo.items.map((item) => (
+          <div class="svc-card rv"><div class="svc-num">{item.number}</div><h3>{item.title}</h3><p>{item.description}</p></div>
+        ))}
       </div>
     </div>
   </section>
@@ -40,8 +39,8 @@ import Layout from '../layouts/Layout.astro';
   <section style="background:var(--bg2)">
     <div class="wrap">
       <div class="rv" style="margin-bottom:54px">
-        <div class="sec-eye">À quoi ça pourrait ressembler</div>
-        <h2 class="sec-h">Un feed qui se reconnaît du premier coup d'œil.</h2>
+        <div class="sec-eye">{feedPreview.eyebrow}</div>
+        <h2 class="sec-h">{feedPreview.title}</h2>
       </div>
       <div class="ig-section rv">
         <div class="phone-frame">
@@ -58,14 +57,12 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
         <div class="ig-caption">
-          <span class="style-badge">Exemple de style</span>
-          <h3>À quoi pourrait ressembler votre feed.</h3>
+          <span class="style-badge">{feedPreview.badge}</span>
+          <h3>{feedPreview.feedTitle}</h3>
           <ul>
-            <li><span class="ck">→</span> Chaque case représente une publication (photo, story ou reel)</li>
-            <li><span class="ck">→</span> Une palette de couleurs cohérente, propre à votre commerce</li>
-            <li><span class="ck">→</span> Un style reconnaissable, même sans voir le nom du compte</li>
-            <li><span class="ck">→</span> Une régularité qui donne confiance aux visiteurs</li>
-            <li><span class="ck">→</span> Pas un vrai compte client : un exemple de direction visuelle</li>
+            {feedPreview.bullets.map((bullet) => (
+              <li><span class="ck">→</span> {bullet}</li>
+            ))}
           </ul>
         </div>
       </div>
@@ -75,17 +72,17 @@ import Layout from '../layouts/Layout.astro';
   <!-- DIFFÉRENCIATEUR -->
   <section class="pitch">
     <div class="wrap">
-      <h2 class="rv">Nous ne sommes pas une agence avec 50 clients en portefeuille. Nous sommes deux, et votre commerce compte vraiment.</h2>
+      <h2 class="rv">{pitch.text}</h2>
     </div>
   </section>
 
   <!-- TEASER TARIFS -->
   <section>
     <div class="wrap cta-band rv">
-      <div class="sec-eye">Tarifs</div>
-      <h2 class="sec-h">Forfait mensuel, ou coup de pouce ponctuel.</h2>
-      <p class="sec-sub">Présence, Visibilité ou Croissance+ : trois forfaits, plus des prestations à la carte sans engagement.</p>
-      <a href="/tarifs#social" class="btn btn-primary">Voir les tarifs réseaux sociaux →</a>
+      <div class="sec-eye">{pricingTeaser.eyebrow}</div>
+      <h2 class="sec-h">{pricingTeaser.title}</h2>
+      <p class="sec-sub">{pricingTeaser.subtitle}</p>
+      <a href={pricingTeaser.ctaHref} class="btn btn-primary">{pricingTeaser.ctaLabel}</a>
     </div>
   </section>
 </Layout>
