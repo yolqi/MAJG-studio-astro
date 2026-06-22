@@ -5,3 +5,6 @@
 node_modules/
 dist/
 .astro/
+
+# Claude Code (config locale à la machine)
+.claude/settings.local.json

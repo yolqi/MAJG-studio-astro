@@ -3,8 +3,8 @@ backend:
   repo: yolqi/MAJG-studio-astro
   branch: migration-astro
 
-media_folder: "public/images"
-public_folder: "/images"
+media_folder: "src/content/pages/images"
+public_folder: "./images"
 
 collections:
   - name: pages
@@ -101,5 +101,156 @@ collections:
               - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
               - { label: Titre, name: title, widget: string }
               - { label: Sous-titre, name: subtitle, widget: text }
+              - { label: "Bouton — texte", name: ctaLabel, widget: string }
+              - { label: "Bouton — lien", name: ctaHref, widget: string }
+
+      - name: realisations
+        label: "Réalisations"
+        file: src/content/pages/realisations.yaml
+        fields:
+          - label: Référencement (SEO)
+            name: seo
+            widget: object
+            fields:
+              - { label: "Titre de l'onglet du navigateur", name: title, widget: string }
+              - { label: "Description (résultats Google)", name: description, widget: text }
+
+          - label: Introduction
+            name: intro
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: "Titre — première partie", name: titleLine1, widget: string }
+              - { label: "Titre — fin mise en valeur", name: titleEmphasis, widget: string }
+              - { label: "Texte d'introduction", name: lead, widget: text }
+
+          - label: "Concept — Gîte"
+            name: gite
+            widget: object
+            fields:
+              - { label: "Étiquette au-dessus de la photo", name: tag, widget: string }
+              - label: Espaces (cliquables)
+                name: rooms
+                widget: list
+                fields:
+                  - { label: "Identifiant (sans espace, ex. chambre)", name: key, widget: string }
+                  - { label: "Nom du bouton", name: label, widget: string }
+                  - { label: "Titre — ligne 1", name: titleLine1, widget: string }
+                  - { label: "Titre — ligne 2", name: titleLine2, widget: string }
+                  - { label: Description, name: description, widget: text }
+                  - { label: "Texte du bouton d'action", name: button, widget: string }
+                  - { label: Photo, name: photo, widget: image }
+              - label: "Bloc d'explication"
+                name: info
+                widget: object
+                fields:
+                  - { label: Étiquette, name: tag, widget: string }
+                  - { label: Titre, name: title, widget: string }
+                  - { label: "Pour qui", name: place, widget: string }
+                  - { label: "Texte complémentaire", name: more, widget: text }
+                  - { label: "Liste à puces", name: bullets, widget: list, field: { label: Puce, name: bullet, widget: string } }
+                  - label: Statistiques
+                    name: stats
+                    widget: list
+                    fields:
+                      - { label: Valeur, name: value, widget: string }
+                      - { label: Libellé, name: label, widget: string }
+
+          - label: "Concept — Institut"
+            name: institut
+            widget: object
+            fields:
+              - { label: "Étiquette au-dessus de la photo", name: tag, widget: string }
+              - { label: "Titre — ligne 1", name: titleLine1, widget: string }
+              - { label: "Titre — ligne 2", name: titleLine2, widget: string }
+              - label: Soins (cliquables)
+                name: soins
+                widget: list
+                fields:
+                  - { label: Nom, name: label, widget: string }
+                  - { label: Prix, name: price, widget: string }
+                  - { label: Durée, name: duree, widget: string }
+                  - { label: Photo, name: photo, widget: image }
+              - { label: "Texte du bouton d'action", name: button, widget: string }
+              - label: "Bloc d'explication"
+                name: info
+                widget: object
+                fields:
+                  - { label: Étiquette, name: tag, widget: string }
+                  - { label: Titre, name: title, widget: string }
+                  - { label: "Pour qui", name: place, widget: string }
+                  - { label: "Texte complémentaire", name: more, widget: text }
+                  - { label: "Liste à puces", name: bullets, widget: list, field: { label: Puce, name: bullet, widget: string } }
+                  - label: Statistiques
+                    name: stats
+                    widget: list
+                    fields:
+                      - { label: Valeur, name: value, widget: string }
+                      - { label: Libellé, name: label, widget: string }
+
+          - label: "Concept — Artisan"
+            name: artisan
+            widget: object
+            fields:
+              - { label: "Titre — ligne 1", name: titleLine1, widget: string }
+              - { label: "Titre — ligne 2", name: titleLine2, widget: string }
+              - { label: Photo, name: photo, widget: image }
+              - label: "Cases du calculateur de devis"
+                name: checkboxes
+                widget: list
+                fields:
+                  - { label: Nom, name: label, widget: string }
+                  - { label: "Prix minimum", name: min, widget: number, value_type: int }
+                  - { label: "Prix maximum", name: max, widget: number, value_type: int }
+                  - { label: "Cochée par défaut", name: checked, widget: boolean, default: false }
+              - label: "Bloc d'explication"
+                name: info
+                widget: object
+                fields:
+                  - { label: Étiquette, name: tag, widget: string }
+                  - { label: Titre, name: title, widget: string }
+                  - { label: "Pour qui", name: place, widget: string }
+                  - { label: "Texte complémentaire", name: more, widget: text }
+                  - { label: "Liste à puces", name: bullets, widget: list, field: { label: Puce, name: bullet, widget: string } }
+                  - label: Statistiques
+                    name: stats
+                    widget: list
+                    fields:
+                      - { label: Valeur, name: value, widget: string }
+                      - { label: Libellé, name: label, widget: string }
+
+          - label: "Concept — Réseaux sociaux"
+            name: socialFeed
+            widget: object
+            fields:
+              - label: "Cases du feed Instagram (9)"
+                name: cells
+                widget: list
+                fields:
+                  - { label: "Type de publication", name: type, widget: string, hint: "Post, Story ou Reel" }
+                  - { label: Sujet, name: sujet, widget: string }
+                  - { label: Photo, name: photo, widget: image }
+              - label: "Bloc d'explication"
+                name: info
+                widget: object
+                fields:
+                  - { label: Étiquette, name: tag, widget: string }
+                  - { label: Titre, name: title, widget: string }
+                  - { label: "Pour qui", name: place, widget: string }
+                  - { label: "Texte complémentaire", name: more, widget: text }
+                  - { label: "Liste à puces", name: bullets, widget: list, field: { label: Puce, name: bullet, widget: string } }
+                  - label: Statistiques
+                    name: stats
+                    widget: list
+                    fields:
+                      - { label: Valeur, name: value, widget: string }
+                      - { label: Libellé, name: label, widget: string }
+
+          - label: "Appel à l'action final"
+            name: finalCta
+            widget: object
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: eyebrow, widget: string }
+              - { label: Titre, name: title, widget: string }
               - { label: "Bouton — texte", name: ctaLabel, widget: string }
               - { label: "Bouton — lien", name: ctaHref, widget: string }

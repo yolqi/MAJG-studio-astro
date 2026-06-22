@@ -1,0 +1,144 @@
+seo:
+  title: "Réalisations — MAJG Studio"
+  description: "Concepts de sites web et exemples de style réseaux sociaux signés MAJG Studio — ce qu'on sait faire, pas des cas inventés."
+
+intro:
+  eyebrow: "Réalisations"
+  titleLine1: "On vous montre,"
+  titleEmphasis: "vous jugez."
+  lead: "Pas de clients fictifs : des concepts pensés pour montrer ce qu'on sait faire, dans des styles différents. Le vôtre sera pensé pour vous."
+
+gite:
+  tag: "Gîte & chambres d'hôtes · Style Naturel"
+  rooms:
+    - key: chambre
+      label: "Chambre"
+      titleLine1: "Le calme,"
+      titleLine2: "à deux pas de la ville."
+      description: "Lit douillet, lumière naturelle, vue sur les hauteurs."
+      button: "Vérifier les disponibilités"
+      photo: ./images/gite-chambre.jpg
+    - key: terrasse
+      label: "Terrasse"
+      titleLine1: "Le café du matin,"
+      titleLine2: "face aux collines."
+      description: "Un espace extérieur partagé, ouvert du printemps à l'automne."
+      button: "Voir la terrasse"
+      photo: ./images/gite-terrasse.jpg
+    - key: sdb
+      label: "Salle d'eau"
+      titleLine1: "Une salle d'eau,"
+      titleLine2: "pensée comme à la maison."
+      description: "Douche à l'italienne, linge fourni, rien à prévoir."
+      button: "Découvrir l'équipement"
+      photo: ./images/gite-sdb.jpg
+    - key: exterieur
+      label: "Extérieur"
+      titleLine1: "Le jardin,"
+      titleLine2: "pour souffler un peu."
+      description: "Transats, ombre des oliviers, calme garanti."
+      button: "Voir les extérieurs"
+      photo: ./images/gite-exterieur.jpg
+  info:
+    tag: "Style Naturel"
+    title: "Un site qui respire"
+    place: "Pour les hébergements, gîtes et activités au vert"
+    more: "Quatre espaces, quatre ambiances : on photographie chaque pièce pour que le visiteur se projette avant même d'appeler."
+    bullets:
+      - "Tons doux, matières et lumière naturelle"
+      - "Galerie immersive des chambres & extérieurs"
+      - "Calendrier de disponibilités mis en avant"
+      - "Avis voyageurs intégrés"
+    stats:
+      - { value: "Sur-mesure +", label: "réservation incluse" }
+      - { value: "Responsive", label: "mobile & bureau" }
+      - { value: "Google", label: "bases posées" }
+
+institut:
+  tag: "Institut de beauté · Style Moderne"
+  titleLine1: "Prenez soin"
+  titleLine2: "de vous, simplement."
+  soins:
+    - label: "Soin du visage"
+      price: "55 €"
+      duree: "45 min"
+      photo: ./images/soin-visage.jpg
+    - label: "Modelage relaxant"
+      price: "80 €"
+      duree: "1h15"
+      photo: ./images/soin-modelage.jpg
+    - label: "Beauté des mains"
+      price: "35 €"
+      duree: "30 min"
+      photo: ./images/soin-mains.jpg
+  button: "Réserver ce soin"
+  info:
+    tag: "Style Moderne"
+    title: "Net, direct, efficace"
+    place: "Pour les instituts, salons et services qui misent sur l'image"
+    more: "Le visiteur choisit sa prestation, voit le prix et la durée s'afficher, puis réserve sans avoir besoin d'appeler."
+    bullets:
+      - "Mise en page épurée, typographie forte"
+      - "Prestations & tarifs présentés clairement"
+      - "Prise de rendez-vous en un clic"
+      - "Pensé pour être partagé sur les réseaux"
+    stats:
+      - { value: "Vitrine", label: "complète" }
+      - { value: "RDV", label: "en ligne" }
+      - { value: "Réseaux", label: "liés au site" }
+
+artisan:
+  titleLine1: "Un travail"
+  titleLine2: "qui dure."
+  photo: ./images/artisan.jpg
+  checkboxes:
+    - { label: "Garde-corps / rambarde", min: 200, max: 450, checked: true }
+    - { label: "Portail sur-mesure", min: 350, max: 800, checked: false }
+    - { label: "Réparation / soudure", min: 150, max: 300, checked: false }
+    - { label: "Structure métallique", min: 500, max: 1200, checked: false }
+  info:
+    tag: "Style Industriel / compact"
+    title: "Sobre, solide, sans détour"
+    place: "Pour les artisans et indépendants qui vont droit au but"
+    more: "Le visiteur coche ce dont il a besoin et voit une fourchette de prix se mettre à jour en direct — un premier chiffrage avant même le premier appel."
+    bullets:
+      - "Une seule page, l'essentiel bien rangé"
+      - "Zone d'intervention & spécialités claires"
+      - "Devis en ligne en 2 minutes"
+      - "Chargement rapide, zéro fioriture"
+    stats:
+      - { value: "Essentiel", label: "1 page efficace" }
+      - { value: "Responsive", label: "mobile & bureau" }
+      - { value: "Google", label: "bases posées" }
+
+socialFeed:
+  cells:
+    - { type: "Post", sujet: "Nouvelle prestation du mois", photo: ./images/social-1.jpg }
+    - { type: "Story", sujet: "Coulisses de l'atelier", photo: ./images/artisan.jpg }
+    - { type: "Reel", sujet: "Avant / après en 15 secondes", photo: ./images/soin-visage.jpg }
+    - { type: "Post", sujet: "Avis client mis en avant", photo: ./images/social-4.jpg }
+    - { type: "Story", sujet: "Sondage : votre prochaine envie", photo: ./images/social-5.jpg }
+    - { type: "Reel", sujet: "Une journée dans le commerce", photo: ./images/social-6.jpg }
+    - { type: "Post", sujet: "Annonce d'un nouvel horaire", photo: ./images/social-7.jpg }
+    - { type: "Story", sujet: "Question-réponse en direct", photo: ./images/social-8.jpg }
+    - { type: "Reel", sujet: "Présentation d'une nouveauté", photo: ./images/social-9.jpg }
+  info:
+    tag: "Réseaux sociaux"
+    title: "Un feed qui se reconnaît"
+    place: "Palette cohérente, style reconnaissable, régularité"
+    more: "Neuf publications, trois formats différents : la variété entretient l'attention, la cohérence visuelle entretient la reconnaissance."
+    bullets:
+      - "Visuels & légendes propres à votre commerce"
+      - "Calendrier de publication régulier"
+      - "Réponses aux commentaires & messages"
+      - "Pas un vrai compte client : un exemple de direction visuelle"
+    stats:
+      - { value: "Présence", label: "1 à 2 réseaux" }
+      - { value: "Régularité", label: "publication planifiée" }
+      - { value: "Reporting", label: "chaque mois" }
+
+finalCta:
+  eyebrow: "On en discute ?"
+  title: "Votre commerce, votre style."
+  ctaLabel: "Demander ma démo gratuite →"
+  ctaHref: "/contact"

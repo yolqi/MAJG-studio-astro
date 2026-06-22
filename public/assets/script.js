@@ -36,21 +36,15 @@ document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
 function setActive(group,btn){group.forEach(b=>b.classList.remove('active'));btn.classList.add('active')}
 
 // Réalisations — gîte : sélecteur d'espaces
-const giteData={
-  chambre:{title:"Le calme,<br>à deux pas de la ville.",desc:"Lit douillet, lumière naturelle, vue sur les hauteurs.",btn:"Vérifier les disponibilités",img:"https://images.unsplash.com/photo-1764760764956-fcb78be107a5?auto=format&fit=crop&w=900&q=70"},
-  terrasse:{title:"Le café du matin,<br>face aux collines.",desc:"Un espace extérieur partagé, ouvert du printemps à l'automne.",btn:"Voir la terrasse",img:"https://images.unsplash.com/photo-1778549026540-579eda9c0b73?auto=format&fit=crop&w=900&q=70"},
-  sdb:{title:"Une salle d'eau,<br>pensée comme à la maison.",desc:"Douche à l'italienne, linge fourni, rien à prévoir.",btn:"Découvrir l'équipement",img:"https://images.unsplash.com/photo-1744869524920-f0efc925b82f?auto=format&fit=crop&w=900&q=70"},
-  exterieur:{title:"Le jardin,<br>pour souffler un peu.",desc:"Transats, ombre des oliviers, calme garanti.",btn:"Voir les extérieurs",img:"https://images.unsplash.com/photo-1767969217509-7edd70a96e1b?auto=format&fit=crop&w=900&q=70"}
-};
 document.querySelectorAll('.gite-thumb').forEach(btn=>btn.addEventListener('click',()=>{
-  const wrap=btn.closest('.demo-visual'),room=giteData[btn.dataset.room];
-  if(!wrap||!room)return;
+  const wrap=btn.closest('.demo-visual');
+  if(!wrap)return;
   setActive(wrap.querySelectorAll('.gite-thumb'),btn);
   const h=wrap.querySelector('h3'),d=wrap.querySelector('.gite-desc'),b=wrap.querySelector('.m-btn');
-  if(h)h.innerHTML=room.title;
-  if(d)d.textContent=room.desc;
-  if(b)b.textContent=room.btn;
-  wrap.style.setProperty('--photo',`url('${room.img}')`);
+  if(h)h.innerHTML=btn.dataset.title;
+  if(d)d.textContent=btn.dataset.desc;
+  if(b)b.textContent=btn.dataset.btn;
+  wrap.style.setProperty('--photo',`url('${btn.dataset.img}')`);
 }));
 
 // Réalisations — institut : sélecteur de soin avec prix/durée/photo

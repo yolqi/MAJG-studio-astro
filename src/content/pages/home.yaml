@@ -1,73 +1,67 @@
 seo:
-  title: "MAJG Studio — Sites web & réseaux sociaux pour commerçants, partout en France"
-  description: "MAJG Studio crée des sites web sur-mesure et anime vos réseaux sociaux pour les commerçants et artisans, basés à Marseille et actifs partout en France. Design soigné, contenu qui donne envie, démo gratuite avant tout engagement."
-
+  title: MAJG Studio — Sites web & réseaux sociaux pour commerçants, partout en France
+  description: MAJG Studio crée des sites web sur-mesure et anime vos réseaux sociaux pour les commerçants et artisans, basés à Marseille et actifs partout en France. Design soigné, contenu qui donne envie, démo gratuite avant tout engagement.
 hero:
-  eyebrow: "Sites web & réseaux sociaux"
-  title: "On fait briller les commerces qu'on aime,"
-  titleEmphasis: "en ligne"
-  lead: "Deux Marseillais, deux métiers complémentaires : des sites web sur-mesure et une présence réseaux sociaux qui donne envie. On commence toujours par vous montrer une démo — avant que vous décidiez quoi que ce soit."
-  ctaPrimaryLabel: "Voir une démo gratuite →"
-  ctaPrimaryHref: "/contact"
-  ctaGhostLabel: "Nos réalisations"
-  ctaGhostHref: "/realisations"
+  eyebrow: Sites web & réseaux sociaux
+  title: On fait briller les commerces qu'on aime,
+  titleEmphasis: en ligne
+  lead: 'Deux Marseillais, deux métiers complémentaires : des sites web sur-mesure et une présence réseaux sociaux qui donne envie. On commence toujours par vous montrer une démo — avant que vous décidiez quoi que ce soit.'
+  ctaPrimaryLabel: Voir une démo gratuite →
+  ctaPrimaryHref: /contact
+  ctaGhostLabel: Nos réalisations
+  ctaGhostHref: /realisations
   stats:
-    - value: "Sur-mesure"
-      label: "Jamais de template recopié"
-    - value: "Démo d'abord"
-      label: "Vous voyez avant de payer"
-    - value: "Web & réseaux"
-      label: "Deux métiers, un interlocuteur"
-
+    - value: Sur-mesure
+      label: Jamais de template recopié
+    - value: Démo d'abord
+      label: Vous voyez avant de payer
+    - value: Web & réseaux
+      label: Deux métiers, un interlocuteur
 painPoint:
-  eyebrow: "Le constat"
-  title: "Des commerces solides, invisibles en ligne."
-  paragraph1: "Marseille compte des commerces de qualité — et pourtant largement invisibles sur internet. Pas par manque de savoir-faire. Par manque de visibilité. Des coiffeurs, des restaurants, des instituts qui mériteraient d'être pleins, et qu'on ne trouve pas en deux clics."
-  paragraph2: "C'est ce constat qui a donné naissance à MAJG Studio."
-  discoverLinkLabel: "Découvrir notre histoire →"
-  discoverLinkHref: "/nous-sommes"
-  statValue: "9 / 10"
-  statLabel: "clients se renseignent en ligne avant de pousser la porte d'un commerce — et passent à côté de ceux qu'ils ne trouvent pas."
-
+  eyebrow: Le constat
+  title: Des commerces solides, invisibles en ligne.
+  paragraph1: Marseille compte des commerces de qualité — et pourtant largement invisibles sur internet. Pas par manque de savoir-faire. Par manque de visibilité. Des coiffeurs, des restaurants, des instituts qui mériteraient d'être pleins, et qu'on ne trouve pas en deux clics.
+  paragraph2: C'est ce constat qui a donné naissance à MAJG Studio.
+  discoverLinkLabel: Découvrir notre histoire →
+  discoverLinkHref: /nous-sommes
+  statValue: 9 / 10
+  statLabel: clients se renseignent en ligne avant de pousser la porte d'un commerce — et passent à côté de ceux qu'ils ne trouvent pas.
 services:
-  eyebrow: "Ce qu'on fait"
-  title: "Deux métiers. Un seul interlocuteur."
-  subtitle: "On ne fait pas que des sites, et on ne fait pas que des réseaux. On fait les deux, et on les fait bien."
+  eyebrow: Ce qu'on fait
+  title: Deux métiers. Un seul interlocuteur.
+  subtitle: On ne fait pas que des sites, et on ne fait pas que des réseaux. On fait les deux, et on les fait bien.
   items:
-    - number: "01"
-      title: "Sites Web"
-      description: "Une vitrine qui vous ressemble, et qu'on construit pour vous — pas un modèle recopié. Démo avant tout engagement."
-      href: "/sites-web"
-    - number: "02"
-      title: "Réseaux Sociaux"
-      description: "Une présence qui fait parler de vous, sans vous prendre votre temps. Contenu, publication, suivi."
-      href: "/reseaux-sociaux"
-
+    - number: '01'
+      title: Sites Web
+      description: Une vitrine qui vous ressemble, et qu'on construit pour vous — pas un modèle recopié. Démo avant tout engagement.
+      href: /sites-web
+    - number: '02'
+      title: Réseaux Sociaux
+      description: Une présence qui fait parler de vous, sans vous prendre votre temps. Contenu, publication, suivi.
+      href: /reseaux-sociaux
 process:
-  eyebrow: "Comment ça se passe"
-  title: "Simple, du début à la mise en ligne."
-  subtitle: "Trois étapes, et un interlocuteur unique tout du long."
+  eyebrow: Comment ça se passe
+  title: Simple, du début à la mise en ligne.
+  subtitle: Trois étapes, et un interlocuteur unique tout du long.
   steps:
-    - number: "01"
-      title: "On vous montre une démo"
-      description: "On conçoit un premier aperçu de votre site ou de votre future présence, à votre nom, pour que vous voyiez concrètement le rendu. Gratuit et sans engagement."
-    - number: "02"
-      title: "On l'affine ensemble"
+    - number: '01'
+      title: On vous montre une démo
+      description: On conçoit un premier aperçu de votre site ou de votre future présence, à votre nom, pour que vous voyiez concrètement le rendu. Gratuit et sans engagement.
+    - number: '02'
+      title: On l'affine ensemble
       description: "Vos photos, vos textes, vos couleurs : on ajuste jusqu'à ce que ça vous ressemble vraiment."
-    - number: "03"
-      title: "On lance, et on reste là"
-      description: "Petit acompte au démarrage, solde seulement quand vous êtes satisfait. On reste disponible après."
-
+    - number: '03'
+      title: On lance, et on reste là
+      description: Petit acompte au démarrage, solde seulement quand vous êtes satisfait. On reste disponible après.
 pricingTeaser:
-  eyebrow: "Tarifs"
-  title: "Des prix clairs, pas de surprise."
-  subtitle: "Sites web et réseaux sociaux : deux grilles tarifaires détaillées, dès le départ, sur une seule page."
-  ctaLabel: "Voir les tarifs →"
-  ctaHref: "/tarifs"
-
+  eyebrow: Tarifs
+  title: Des prix clairs, pas de surprise.
+  subtitle: 'Sites web et réseaux sociaux : deux grilles tarifaires détaillées, dès le départ, sur une seule page.'
+  ctaLabel: Voir les tarifs →
+  ctaHref: /tarifs
 finalCta:
-  eyebrow: "On en discute ?"
-  title: "Parlons de votre commerce."
-  subtitle: "Dites-nous ce que vous faites, on vous recontacte avec une démo et une proposition claire. Gratuit, sans engagement."
-  ctaLabel: "Demander ma démo gratuite →"
-  ctaHref: "/contact"
+  eyebrow: On en discute ?
+  title: Parlons de votre commerce.
+  subtitle: Dites-nous ce que vous faites, on vous recontacte avec une démo et une proposition claire. Gratuit, sans engagement.
+  ctaLabel: Demander ma démo gratuite →
+  ctaHref: /contact
