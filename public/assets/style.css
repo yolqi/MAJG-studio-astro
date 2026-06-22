@@ -353,6 +353,7 @@ footer{background:var(--night);color:var(--sand);padding:56px 0 30px}
 
 @media(max-width:900px){
   .hero-grid,.demo-card,.contact-grid,.ig-section,.pain-grid{grid-template-columns:1fr}
+  .demo-visual{order:-1}
   .svc-grid,.feat-grid,.proc-grid,.price-grid,.founders-grid{grid-template-columns:1fr}
   .alacarte-list li{flex-direction:column;align-items:flex-start;gap:4px}
   .demo-visual{min-height:240px}
