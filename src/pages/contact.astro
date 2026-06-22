@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="Contact — MAJG Studio"
+  description="Contactez MAJG Studio pour une démo gratuite de votre site ou un accompagnement réseaux sociaux, à Marseille ou partout en France."
+  activePage="contact"
+>
+  <!-- CONTACT -->
+  <section class="contact" style="padding-top:150px">
+    <div class="wrap">
+      <div class="rv">
+        <div class="sec-eye">Contact</div>
+        <h2 class="sec-h">Parlons de votre commerce.</h2>
+        <p class="sec-sub" style="color:var(--sand);opacity:.75">Dites-nous ce que vous faites, on vous recontacte avec une démo et une proposition claire. Gratuit, sans engagement.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info rv">
+          <div class="ci"><div class="l">Zone</div><div class="v">Marseille &amp; toute la France</div></div>
+          <div class="ci"><div class="l">Email</div><div class="v">contact@majg-studio.fr</div></div>
+          <div class="ci"><div class="l">Réponse</div><div class="v">Sous 72 h</div></div>
+          <div class="ci"><div class="l">Engagement</div><div class="v">Devis &amp; démo gratuits</div></div>
+        </div>
+        <form class="form-card rv" id="contactForm" action="https://formsubmit.co/jules.grisolle@icloud.com" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis — MAJG Studio">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="form-row">
+            <div class="field"><label>Prénom</label><input type="text" name="prenom" placeholder="Votre prénom" required></div>
+            <div class="field"><label>Nom du commerce</label><input type="text" name="commerce" placeholder="Votre commerce" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label>Email</label><input type="email" name="email" placeholder="vous@exemple.fr" required></div>
+            <div class="field"><label>Téléphone</label><input type="tel" name="telephone" placeholder="06 00 00 00 00"></div>
+          </div>
+          <div class="field"><label>Votre activité</label>
+            <select name="activite"><option>Sélectionner…</option><option>Coiffeur / barbier</option><option>Restaurant / café</option><option>Gîte / hôtel</option><option>Institut / bien-être</option><option>Commerce / boutique</option><option>Artisan</option><option>Profession libérale</option><option>Réseaux sociaux uniquement</option><option>Autre</option></select>
+          </div>
+          <div class="field"><label>Votre projet en quelques mots</label><textarea name="projet" placeholder="Je n'ai pas de site / je veux refaire le mien…"></textarea></div>
+          <button class="btn btn-primary btn-full" type="submit">Demander ma démo gratuite →</button>
+          <p class="form-note" id="formStatus">Vos informations servent uniquement à vous recontacter. Jamais transmises à des tiers.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>

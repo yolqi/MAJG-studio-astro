@@ -1,5 +1,5 @@
 ---
-const { title, description, activePage } = Astro.props;
+const { title, description, activePage, noindex } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -9,6 +9,7 @@ const { title, description, activePage } = Astro.props;
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title>
 <meta name="description" content={description}>
+{noindex && <meta name="robots" content="noindex">}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -20,13 +21,13 @@ const { title, description, activePage } = Astro.props;
   <a href="/" class="nav-logo"><span class="logo-text">MAJG STUDIO</span></a>
   <div class="nav-links" id="navLinks">
     <a href="/" class={activePage === 'accueil' ? 'active' : undefined}>Accueil</a>
-    <a href="sites-web.html" class={activePage === 'sites-web' ? 'active' : undefined}>Sites Web</a>
-    <a href="reseaux-sociaux.html" class={activePage === 'reseaux-sociaux' ? 'active' : undefined}>Réseaux Sociaux</a>
-    <a href="realisations.html" class={activePage === 'realisations' ? 'active' : undefined}>Réalisations</a>
-    <a href="nous-sommes.html" class={activePage === 'nous-sommes' ? 'active' : undefined}>Nous sommes</a>
-    <a href="tarifs.html" class={activePage === 'tarifs' ? 'active' : undefined}>Tarifs</a>
+    <a href="/sites-web" class={activePage === 'sites-web' ? 'active' : undefined}>Sites Web</a>
+    <a href="/reseaux-sociaux" class={activePage === 'reseaux-sociaux' ? 'active' : undefined}>Réseaux Sociaux</a>
+    <a href="/realisations" class={activePage === 'realisations' ? 'active' : undefined}>Réalisations</a>
+    <a href="/nous-sommes" class={activePage === 'nous-sommes' ? 'active' : undefined}>Nous sommes</a>
+    <a href="/tarifs" class={activePage === 'tarifs' ? 'active' : undefined}>Tarifs</a>
     <button class="theme-switch" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Activer le mode sombre"><span class="ts-thumb"><svg class="ts-ic ts-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg><svg class="ts-ic ts-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.7 14.6A8.6 8.6 0 1 1 9.4 3.3a7 7 0 0 0 11.3 11.3z"/></svg></span></button>
-    <a href="contact.html" class="nav-cta">Démo gratuite</a>
+    <a href="/contact" class="nav-cta">Démo gratuite</a>
   </div>
   <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
 </nav>
@@ -42,13 +43,13 @@ const { title, description, activePage } = Astro.props;
         <p style="opacity:.6;font-size:.9rem;margin-top:12px;max-width:260px">Sites web sur-mesure et gestion de réseaux sociaux pour les commerçants — basés à Marseille, actifs partout en France.</p>
       </div>
       <div class="foot-cols">
-        <div class="foot-col"><h5>Le site</h5><a href="/">Accueil</a><a href="sites-web.html">Sites Web</a><a href="reseaux-sociaux.html">Réseaux Sociaux</a><a href="realisations.html">Réalisations</a><a href="nous-sommes.html">Nous sommes</a><a href="tarifs.html">Tarifs</a></div>
-        <div class="foot-col"><h5>Contact</h5><a href="contact.html">Démo gratuite</a><p>contact@majg-studio.fr</p><p>Marseille &amp; toute la France</p></div>
+        <div class="foot-col"><h5>Le site</h5><a href="/">Accueil</a><a href="/sites-web">Sites Web</a><a href="/reseaux-sociaux">Réseaux Sociaux</a><a href="/realisations">Réalisations</a><a href="/nous-sommes">Nous sommes</a><a href="/tarifs">Tarifs</a></div>
+        <div class="foot-col"><h5>Contact</h5><a href="/contact">Démo gratuite</a><p>contact@majg-studio.fr</p><p>Marseille &amp; toute la France</p></div>
       </div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 MAJG Studio — Tous droits réservés.</span>
-      <span><a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Politique de confidentialité</a></span>
+      <span><a href="/mentions-legales">Mentions légales</a> · <a href="/politique-confidentialite">Politique de confidentialité</a></span>
     </div>
   </div>
 </footer>

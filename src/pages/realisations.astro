@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="Réalisations — MAJG Studio"
+  description="Concepts de sites web et exemples de style réseaux sociaux signés MAJG Studio — ce qu'on sait faire, pas des cas inventés."
+  activePage="realisations"
+>
+  <!-- INTRO -->
+  <header class="hero">
+    <div class="wrap hero-solo">
+      <span class="eyebrow">Réalisations</span>
+      <h1>On vous montre, <em>vous jugez.</em></h1>
+      <p class="lead">Pas de clients fictifs : des concepts pensés pour montrer ce qu'on sait faire, dans des styles différents. Le vôtre sera pensé pour vous.</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+
+      <div class="demo-card rv" style="margin-bottom:24px">
+        <div class="demo-visual dv-naturel" style="--photo:url('https://images.unsplash.com/photo-1764760764956-fcb78be107a5?auto=format&amp;fit=crop&amp;w=900&amp;q=70')">
+          <span class="badge">Concept</span>
+          <span class="try-hint">À tester →</span>
+          <div class="m-eye">Gîte &amp; chambres d'hôtes · Style Naturel</div>
+          <h3>Le calme,<br>à deux pas de la ville.</h3>
+          <p class="gite-desc">Lit douillet, lumière naturelle, vue sur les hauteurs.</p>
+          <div class="gite-thumbs">
+            <button class="gite-thumb active" data-room="chambre">Chambre</button>
+            <button class="gite-thumb" data-room="terrasse">Terrasse</button>
+            <button class="gite-thumb" data-room="sdb">Salle d'eau</button>
+            <button class="gite-thumb" data-room="exterieur">Extérieur</button>
+          </div>
+          <div class="m-btn">Vérifier les disponibilités</div>
+        </div>
+        <div class="demo-info">
+          <div class="tag">Style Naturel</div>
+          <h3>Un site qui respire</h3>
+          <p class="place">Pour les hébergements, gîtes et activités au vert</p>
+          <p class="demo-more">Quatre espaces, quatre ambiances : on photographie chaque pièce pour que le visiteur se projette avant même d'appeler.</p>
+          <ul>
+            <li><span class="ck">→</span> Tons doux, matières et lumière naturelle</li>
+            <li><span class="ck">→</span> Galerie immersive des chambres &amp; extérieurs</li>
+            <li><span class="ck">→</span> Calendrier de disponibilités mis en avant</li>
+            <li><span class="ck">→</span> Avis voyageurs intégrés</li>
+          </ul>
+          <div class="demo-stats">
+            <div class="ds"><strong>Sur-mesure +</strong><span>réservation incluse</span></div>
+            <div class="ds"><strong>Responsive</strong><span>mobile &amp; bureau</span></div>
+            <div class="ds"><strong>Google</strong><span>bases posées</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-card rv" style="margin-bottom:24px">
+        <div class="demo-info">
+          <div class="tag">Style Moderne</div>
+          <h3>Net, direct, efficace</h3>
+          <p class="place">Pour les instituts, salons et services qui misent sur l'image</p>
+          <p class="demo-more">Le visiteur choisit sa prestation, voit le prix et la durée s'afficher, puis réserve sans avoir besoin d'appeler.</p>
+          <ul>
+            <li><span class="ck">→</span> Mise en page épurée, typographie forte</li>
+            <li><span class="ck">→</span> Prestations &amp; tarifs présentés clairement</li>
+            <li><span class="ck">→</span> Prise de rendez-vous en un clic</li>
+            <li><span class="ck">→</span> Pensé pour être partagé sur les réseaux</li>
+          </ul>
+          <div class="demo-stats">
+            <div class="ds"><strong>Vitrine</strong><span>complète</span></div>
+            <div class="ds"><strong>RDV</strong><span>en ligne</span></div>
+            <div class="ds"><strong>Réseaux</strong><span>liés au site</span></div>
+          </div>
+        </div>
+        <div class="demo-visual dv-moderne" style="--photo:url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&amp;fit=crop&amp;w=900&amp;q=70')">
+          <span class="badge">Concept</span>
+          <span class="try-hint">À tester →</span>
+          <div class="m-eye">Institut de beauté · Style Moderne</div>
+          <h3>Prenez soin<br>de vous, simplement.</h3>
+          <div class="soin-picker">
+            <button class="soin-opt active" data-price="55 €" data-duree="45 min" data-img="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&amp;fit=crop&amp;w=900&amp;q=70">Soin du visage</button>
+            <button class="soin-opt" data-price="80 €" data-duree="1h15" data-img="https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&amp;fit=crop&amp;w=900&amp;q=70">Modelage relaxant</button>
+            <button class="soin-opt" data-price="35 €" data-duree="30 min" data-img="https://images.unsplash.com/photo-1511803574983-43bf1f387ece?auto=format&amp;fit=crop&amp;w=900&amp;q=70">Beauté des mains</button>
+          </div>
+          <div class="soin-detail"><span class="soin-price">55 €</span><span class="soin-duree">45 min</span></div>
+          <div class="m-btn">Réserver ce soin</div>
+        </div>
+      </div>
+
+      <div class="demo-card rv" style="margin-bottom:24px">
+        <div class="demo-visual dv-industriel" style="--photo:url('https://images.unsplash.com/photo-1764245546004-e6b743242a80?auto=format&amp;fit=crop&amp;w=900&amp;q=70')">
+          <span class="badge">Concept</span>
+          <span class="try-hint">À tester →</span>
+          <div class="m-eye">Artisan métallier · Style Industriel</div>
+          <h3>Un travail<br>qui dure.</h3>
+          <div class="devis-calc">
+            <label class="devis-opt"><input type="checkbox" data-min="200" data-max="450" checked> Garde-corps / rambarde</label>
+            <label class="devis-opt"><input type="checkbox" data-min="350" data-max="800"> Portail sur-mesure</label>
+            <label class="devis-opt"><input type="checkbox" data-min="150" data-max="300"> Réparation / soudure</label>
+            <label class="devis-opt"><input type="checkbox" data-min="500" data-max="1200"> Structure métallique</label>
+          </div>
+          <div class="devis-total"><span>Estimation</span><strong>200 € – 450 €</strong></div>
+        </div>
+        <div class="demo-info">
+          <div class="tag">Style Industriel / compact</div>
+          <h3>Sobre, solide, sans détour</h3>
+          <p class="place">Pour les artisans et indépendants qui vont droit au but</p>
+          <p class="demo-more">Le visiteur coche ce dont il a besoin et voit une fourchette de prix se mettre à jour en direct — un premier chiffrage avant même le premier appel.</p>
+          <ul>
+            <li><span class="ck">→</span> Une seule page, l'essentiel bien rangé</li>
+            <li><span class="ck">→</span> Zone d'intervention &amp; spécialités claires</li>
+            <li><span class="ck">→</span> Devis en ligne en 2 minutes</li>
+            <li><span class="ck">→</span> Chargement rapide, zéro fioriture</li>
+          </ul>
+          <div class="demo-stats">
+            <div class="ds"><strong>Essentiel</strong><span>1 page efficace</span></div>
+            <div class="ds"><strong>Responsive</strong><span>mobile &amp; bureau</span></div>
+            <div class="ds"><strong>Google</strong><span>bases posées</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-card rv">
+        <div class="demo-visual" style="align-items:center;background:linear-gradient(160deg,#1c2429,#13181b)">
+          <span class="badge">Exemple de style</span>
+          <span class="try-hint">À tester →</span>
+          <div class="phone-frame" style="margin-top:30px">
+            <div class="ph-bar"><i></i></div>
+            <div class="ig-grid ig-grid-live">
+              <button class="ig-cell" data-type="Post" data-sujet="Nouvelle prestation du mois" style="background-image:url('https://images.unsplash.com/photo-1747832663556-ae65718965ac?auto=format&amp;fit=crop&amp;w=300&amp;q=60')"></button>
+              <button class="ig-cell" data-type="Story" data-sujet="Coulisses de l'atelier" style="background-image:url('https://images.unsplash.com/photo-1764245546004-e6b743242a80?auto=format&amp;fit=crop&amp;w=300&amp;q=60')"></button>
+              <button class="ig-cell" data-type="Reel" data-sujet="Avant / après en 15 secondes" style="background-image:url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&amp;fit=crop&amp;w=300&amp;q=60')"></button>
+              <button class="ig-cell" data-type="Post" data-sujet="Avis client mis en avant" style="background-image:url('https://images.unsplash.com/photo-1758417675743-0c97ae21e2ec?auto=format&amp;fit=crop&amp;w=300&amp;q=60')"></button>
+              <button class="ig-cell" data-type="Story" data-sujet="Sondage : votre prochaine envie" style="background-image:url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&amp;fit=crop&amp;w=300&amp;q=60')"></button>
+              <button class="ig-cell" data-type="Reel" data-sujet="Une journée dans le commerce" style="background-image:url('https://images.unsplash.com/photo-1509457116354-df6d9c7c072d?auto=format&amp;fit=crop&amp;w=300&amp;q=60')"></button>
+              <button class="ig-cell" data-type="Post" data-sujet="Annonce d'un nouvel horaire" style="background-image:url('https://images.unsplash.com/photo-1548538931-b47653628cdc?auto=format&amp;fit=crop&amp;w=300&amp;q=60')"></button>
+              <button class="ig-cell" data-type="Story" data-sujet="Question-réponse en direct" style="background-image:url('https://images.unsplash.com/photo-1639696194673-67b86204b885?auto=format&amp;fit=crop&amp;w=300&amp;q=60')"></button>
+              <button class="ig-cell" data-type="Reel" data-sujet="Présentation d'une nouveauté" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=300&amp;q=60')"></button>
+            </div>
+            <div class="ig-reveal"><span class="ig-reveal-type">Post</span><span class="ig-reveal-sujet">Cliquez sur une case du feed</span></div>
+          </div>
+        </div>
+        <div class="demo-info">
+          <div class="tag">Réseaux sociaux</div>
+          <h3>Un feed qui se reconnaît</h3>
+          <p class="place">Palette cohérente, style reconnaissable, régularité</p>
+          <p class="demo-more">Neuf publications, trois formats différents : la variété entretient l'attention, la cohérence visuelle entretient la reconnaissance.</p>
+          <ul>
+            <li><span class="ck">→</span> Visuels &amp; légendes propres à votre commerce</li>
+            <li><span class="ck">→</span> Calendrier de publication régulier</li>
+            <li><span class="ck">→</span> Réponses aux commentaires &amp; messages</li>
+            <li><span class="ck">→</span> Pas un vrai compte client : un exemple de direction visuelle</li>
+          </ul>
+          <div class="demo-stats">
+            <div class="ds"><strong>Présence</strong><span>1 à 2 réseaux</span></div>
+            <div class="ds"><strong>Régularité</strong><span>publication planifiée</span></div>
+            <div class="ds"><strong>Reporting</strong><span>chaque mois</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="contact">
+    <div class="wrap cta-band rv">
+      <div class="sec-eye">On en discute ?</div>
+      <h2 class="sec-h">Votre commerce, votre style.</h2>
+      <a href="/contact" class="btn btn-primary">Demander ma démo gratuite →</a>
+    </div>
+  </section>
+</Layout>
