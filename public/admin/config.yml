@@ -4,7 +4,7 @@ backend:
   branch: migration-astro
 
 media_folder: "src/content/pages/images"
-public_folder: "./images"
+public_folder: "/src/content/pages/images"
 
 collections:
   - name: pages
