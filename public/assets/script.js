@@ -99,6 +99,9 @@ if(contactForm){
       body:JSON.stringify(Object.fromEntries(new FormData(contactForm)))
     }).then(r=>{
       if(!r.ok)throw new Error('send failed');
+      return r.json();
+    }).then(data=>{
+      if(data.success!==true&&data.success!=='true')throw new Error(data.message||'send failed');
       btn.textContent='Merci ! On vous recontacte sous 72 h ✓';
       if(status)status.textContent="C'est envoyé. On revient vers vous très vite.";
       contactForm.reset();
