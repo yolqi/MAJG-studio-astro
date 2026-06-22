@@ -7,7 +7,7 @@ const { seo, intro, sections } = page.data;
 ---
 <Layout title={seo.title} description={seo.description} activePage="politique-confidentialite" noindex>
   <!-- INTRO -->
-  <header class="hero" style="padding:150px 0 70px">
+  <header class="hero" style="padding:calc(150px + var(--strip-h)) 0 70px">
     <div class="wrap hero-solo">
       <span class="eyebrow">{intro.eyebrow}</span>
       <h1>{intro.title}</h1>
